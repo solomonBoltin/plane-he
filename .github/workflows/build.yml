@@ -89,13 +89,6 @@ jobs:
           echo "sha=$sha" >> "$GITHUB_OUTPUT"
           echo "sha256: $sha" >> "$GITHUB_STEP_SUMMARY"
 
-      - name: Publish the image to GHCR
-        run: |
-          echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
-          image="ghcr.io/${{ github.repository_owner }}/plane-frontend:${{ steps.pin.outputs.tag }}-he"
-          docker tag "plane-frontend-he:${{ steps.pin.outputs.tag }}" "$image"
-          docker push "$image"
-
       - name: Publish the SPA as a release asset
         uses: softprops/action-gh-release@v2
         with:
@@ -105,8 +98,26 @@ jobs:
             Hebrew locale (`he`) + RTL support for Plane ${{ steps.pin.outputs.tag }}, built from
             `makeplane/plane` at that tag with the patch in this repository.
 
-            The tarball is the SPA that upstream's image serves from `/usr/share/caddy/html`.
+            The tarball is the SPA that upstream's image serves from its static web root
+            (`/usr/share/nginx/html` on this tag). It is what `apps/project-pln` consumes:
+            `PLANE_HE_WEB_URL` + `PLANE_HE_WEB_SHA256`.
           files: ${{ steps.spa.outputs.asset }}
+
+      # Order matters: the RELEASE ASSET above is the artifact the office consumes, and it needs no
+      # registry login. GHCR is the convenience copy, so a registry problem must never block the
+      # thing that actually deploys.
+      - name: Publish the image to GHCR
+        continue-on-error: true
+        run: |
+          # GHCR rejects an UPPERCASE repository path, and `github.repository_owner` preserves the
+          # account's casing (`solomonBoltin`) — pushing that verbatim fails with "repository name
+          # must be lowercase" and takes the rest of the job with it.
+          owner=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
+          echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
+          image="ghcr.io/${owner}/plane-frontend:${{ steps.pin.outputs.tag }}-he"
+          docker tag "plane-frontend-he:${{ steps.pin.outputs.tag }}" "$image"
+          docker push "$image"
+          echo "pushed $image"
 
       - name: Try to make the GHCR package public (anonymous pulls for the office)
         continue-on-error: true
@@ -114,5 +125,4 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh api --method PATCH "/user/packages/container/plane-frontend" -f visibility=public \
-            || gh api --method PATCH "/users/${{ github.repository_owner }}/packages/container/plane-frontend" -f visibility=public \
             || echo "::warning::could not flip the package to public — set it in the package settings (one click), or consume the release asset instead (which needs no login)."
