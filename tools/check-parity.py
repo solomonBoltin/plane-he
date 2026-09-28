@@ -38,6 +38,21 @@ IDENT = re.compile(r"\{([A-Za-z_][A-Za-z0-9_]*)\}")
 PLURAL_HEAD = re.compile(r"\{\s*(\w+)\s*,\s*plural\s*,")
 BRANCH = re.compile(r"(\w+)\s*\{")
 
+# Deliberate, reviewed exceptions — each one is a string where Hebrew CANNOT mirror the English
+# structure and the code supplying the values is oblivious to that. Such a path is exempt from the
+# placeholder and ICU comparison (structure is still checked). Keeping them visible here is the
+# point: an allowlist entry is a decision someone made, not a check that quietly stopped looking.
+#
+#   workspace.members_import.summary.message.success
+#     English: "Successfully added {count} member{plural} to the workspace."
+#     The CODE supplies {plural} as an English plural SUFFIX ("member" + "s"). Hebrew's plural is
+#     not a suffix, so the Hebrew is rewritten as an ICU plural and never references {plural}.
+#     i18next ignores a value the translation never asks for, which is strictly better than
+#     rendering "חברs".
+ALLOWED_RESTRUCTURES: dict[tuple[str, str], str] = {
+    ("workspace.json", "workspace.members_import.summary.message.success"): "English plural suffix supplied by code; Hebrew uses ICU instead",
+}
+
 
 def leaves(node, prefix=""):
     if isinstance(node, dict):
@@ -169,6 +184,8 @@ def main() -> int:
                     problems.append(f"{name}:{path}: empty translation (English is not empty)")
                 continue
 
+            if (name, path) in ALLOWED_RESTRUCTURES:
+                continue
             want, have = describe(value), describe(got)
             if want[0] != have[0]:
                 problems.append(f"{name}:{path}: placeholders {list(want[0])} -> {list(have[0])}")
