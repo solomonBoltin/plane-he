@@ -63,10 +63,19 @@ jobs:
       - name: Extract the built SPA, set the document to Hebrew, and checksum it
         id: spa
         run: |
-          cid=$(docker create "plane-frontend-he:${{ steps.pin.outputs.tag }}")
-          docker cp "$cid:/usr/share/caddy/html" web
+          # WHERE the static build lives is not stable across upstream versions: the tag this patch
+          # is pinned to (v1.4.2) serves it from nginx at /usr/share/nginx/html, while master's
+          # Dockerfile.web switched the final stage to Caddy and /usr/share/caddy/html. Probing for
+          # it is cheaper than another ten-minute build to discover which one this tag uses — and
+          # loud when neither is there, instead of patching a file that does not exist.
+          img="plane-frontend-he:${{ steps.pin.outputs.tag }}"
+          html_root=$(docker run --rm --entrypoint sh "$img" -c \
+            'for d in /usr/share/nginx/html /usr/share/caddy/html; do [ -f "$d/index.html" ] && { echo "$d"; exit 0; }; done; exit 1')
+          [ -n "$html_root" ] || { echo "::error::no static web root (nginx or caddy) found in $img"; exit 1; }
+          echo "static root in the image: $html_root"
+          cid=$(docker create "$img")
+          docker cp "$cid:$html_root" web
           docker rm "$cid"
-          echo "--- what the image served ---"
           ls -la web | head -20
           # The document element is the one thing the runtime patch cannot fix BEFORE the first
           # paint — index.html is served as-is and the bundle runs after it. Setting lang/dir here
