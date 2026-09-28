@@ -66,19 +66,13 @@ jobs:
           cid=$(docker create "plane-frontend-he:${{ steps.pin.outputs.tag }}")
           docker cp "$cid:/usr/share/caddy/html" web
           docker rm "$cid"
+          echo "--- what the image served ---"
+          ls -la web | head -20
           # The document element is the one thing the runtime patch cannot fix BEFORE the first
-          # paint — index.html is served as-is and the bundle runs after. Setting lang/dir here
+          # paint — index.html is served as-is and the bundle runs after it. Setting lang/dir here
           # removes the left-to-right flash on every load. The runtime patch still owns it after
           # that, so a user who switches back to English gets LTR immediately.
-          python3 - <<'PY'
-          import pathlib, sys
-          p = pathlib.Path("web/index.html")
-          html = p.read_text(encoding="utf-8")
-          if '<html lang="en"' not in html:
-              sys.exit(f"index.html does not carry the expected <html lang=\"en\"> — upstream changed the shell; refusing to ship a half-patched document")
-          p.write_text(html.replace('<html lang="en"', '<html lang="he" dir="rtl"', 1), encoding="utf-8")
-          print("index.html: <html lang=\"he\" dir=\"rtl\">")
-          PY
+          python3 tools/set-document-language.py web/index.html he rtl
           asset="plane-web-he-${{ steps.pin.outputs.tag }}.tar.gz"
           tar -czf "$asset" -C web .
           sha=$(sha256sum "$asset" | cut -d' ' -f1)

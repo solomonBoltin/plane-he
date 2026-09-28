@@ -25,7 +25,8 @@ VERSION                      the upstream tag this patch is derived against (one
 overrides/                   whole replacement files for the upstream sources we change
 locales/he/*.json            28 namespace files — the translation itself
 tools/apply.py               lay the patch over a clean upstream clone (fails loudly on drift)
-tools/check-parity.py        key + placeholder parity against upstream English
+tools/check-parity.py        key + placeholder + ICU parity against upstream English
+tools/set-document-language.py  flip the served index.html to lang="he" dir="rtl"
 .github/workflows/build.yml  build the frontend on a native arm64 runner, publish it
 ```
 
