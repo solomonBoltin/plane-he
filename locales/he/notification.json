@@ -1,0 +1,58 @@
+{
+  "notification": {
+    "label": "תיבת דואר נכנס",
+    "page_label": "{workspace} - תיבת דואר נכנס",
+    "options": {
+      "mark_all_as_read": "סמן הכול כנקרא",
+      "mark_read": "סמן כנקרא",
+      "mark_unread": "סמן כלא נקרא",
+      "refresh": "רענן",
+      "filters": "סינון תיבת דואר נכנס",
+      "show_unread": "הצג שלא נקראו",
+      "show_snoozed": "הצג מושהים",
+      "show_archived": "הצג בארכיון",
+      "mark_archive": "העבר לארכיון",
+      "mark_unarchive": "הוצא מהארכיון",
+      "mark_snooze": "השהה",
+      "mark_unsnooze": "בטל השהיה"
+    },
+    "toasts": {
+      "read": "ההתראה סומנה כנקראה",
+      "unread": "ההתראה סומנה כלא נקראה",
+      "archived": "ההתראה הועברה לארכיון",
+      "unarchived": "ההתראה הוצאה מהארכיון",
+      "snoozed": "ההתראה הושהתה",
+      "unsnoozed": "ההשהיה של ההתראה בוטלה"
+    },
+    "empty_state": {
+      "detail": {
+        "title": "בחר כדי לצפות בפרטים."
+      },
+      "all": {
+        "title": "לא הוקצו פריטי עבודה",
+        "description": "עדכונים על פריטי עבודה שהוקצו לך\nמופיעים כאן"
+      },
+      "mentions": {
+        "title": "לא הוקצו פריטי עבודה",
+        "description": "עדכונים על פריטי עבודה שהוקצו לך\nמופיעים כאן"
+      }
+    },
+    "tabs": {
+      "all": "הכול",
+      "mentions": "אזכורים"
+    },
+    "filter": {
+      "assigned": "הוקצו לי",
+      "created": "נוצרו על ידי",
+      "subscribed": "נרשמתי כמנוי"
+    },
+    "snooze": {
+      "1_day": "יום אחד",
+      "3_days": "3 ימים",
+      "5_days": "5 ימים",
+      "1_week": "שבוע",
+      "2_weeks": "שבועיים",
+      "custom": "מותאם אישית"
+    }
+  }
+}

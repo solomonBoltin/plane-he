@@ -1,0 +1,6 @@
+# The upstream clone tools/apply.py works on. Never committed: it is 200+ MB of someone else's
+# repository, and VERSION + the workflow's `git clone --branch` are the pin.
+upstream/
+# Build output: the extracted SPA and the release tarball built from it.
+web/
+*.tar.gz

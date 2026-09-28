@@ -1,0 +1,113 @@
+{
+  "wiki_collections": {
+    "predefined": {
+      "general": "כללי",
+      "private": "פרטי",
+      "shared": "משותף",
+      "archived": "בארכיון"
+    },
+    "fallback_name": "אוסף",
+    "form": {
+      "name_required": "נדרשת כותרת לאוסף",
+      "name_max_length": "שם האוסף חייב להיות קצר מ-255 תווים",
+      "name_placeholder_create": "הענק כותרת לאוסף",
+      "name_placeholder_edit": "שם האוסף"
+    },
+    "create_modal": {
+      "title": "צור אוסף",
+      "submit": "צור אוסף"
+    },
+    "edit_modal": {
+      "title": "ערוך אוסף"
+    },
+    "delete_modal": {
+      "title": "מחק אוסף",
+      "page_count": "באוסף הזה יש {pageCount} {pageCount, plural, one {דף} other {דפים}}. בחר מה יקרה להם.",
+      "transfer_title": "העבר דפים ומחק את האוסף",
+      "transfer_description": "העבר את כל הדפים לאוסף אחר לפני המחיקה. הדפים וההרשאות שלהם נשמרים.",
+      "transfer_warning": "דפים שיועברו יירשו את ההרשאות של האוסף שנבחר.",
+      "transfer_target_label": "העבר דפים אל",
+      "transfer_target_placeholder": "בחר אוסף",
+      "delete_with_pages_title": "מחק אוסף יחד עם הדפים שבו",
+      "delete_with_pages_description": "מחק לצמיתות את האוסף ואת כל הדפים שבו. לא ניתן לבטל פעולה זו.",
+      "submit": "מחק אוסף"
+    },
+    "header": {
+      "add_page": "הוסף דף"
+    },
+    "menu": {
+      "create_new_page": "צור דף חדש",
+      "add_existing_page": "הוסף דף קיים",
+      "edit_collection": "ערוך אוסף",
+      "collection_options": "אפשרויות אוסף"
+    },
+    "add_existing_page_modal": {
+      "search_placeholder": "חפש דפים",
+      "success_message": "{count} {count, plural, one {דף} other {דפים}} נוספו לאוסף.",
+      "error_message": "לא ניתן היה להעביר את הדפים. נסה שוב.",
+      "no_pages_found": "לא נמצאו דפים תואמים לחיפוש שלך",
+      "no_pages_available": "אין דפים זמינים להעברה",
+      "submit": "העבר"
+    },
+    "list": {
+      "invite_only": "בהזמנה בלבד",
+      "remove_error": "הסרת הדף מהאוסף נכשלה.",
+      "no_matching_pages": "אין דפים תואמים",
+      "remove_search_criteria": "הסר את מונח החיפוש כדי לראות את כל הדפים",
+      "remove_filters": "הסר את הסינון כדי לראות את כל הדפים",
+      "no_pages_title": "אין דפים עדיין",
+      "no_pages_description": "באוסף הזה אין כרגע דפים.",
+      "untitled": "ללא כותרת",
+      "restricted_access": "גישה מוגבלת",
+      "collapse_page": "כווץ דף",
+      "expand_page": "הרחב דף",
+      "page_actions": "פעולות דף",
+      "page_link_copied": "הקישור לדף הועתק ללוח.",
+      "columns": {
+        "page_name": "שם הדף",
+        "owner": "בעלים",
+        "nested_pages": "דפים מקוננים",
+        "last_activity": "פעילות אחרונה",
+        "actions": "פעולות"
+      }
+    },
+    "toasts": {
+      "created": "האוסף נוצר בהצלחה.",
+      "create_error": "לא ניתן היה ליצור את האוסף. נסה שוב.",
+      "renamed": "שם האוסף שונה בהצלחה.",
+      "rename_error": "לא ניתן היה לעדכן את האוסף. נסה שוב.",
+      "transferred_deleted": "הדפים הועברו והאוסף נמחק.",
+      "deleted_with_pages": "האוסף והדפים שבו נמחקו.",
+      "delete_error": "לא ניתן היה למחוק את האוסף. נסה שוב.",
+      "target_required": "נא לבחור אוסף שאליו יועברו הדפים.",
+      "create_page_error": "לא ניתן היה ליצור את הדף. נסה שוב.",
+      "create_page_in_collection_error": "לא ניתן היה ליצור את הדף או להוסיף אותו לאוסף. נסה שוב.",
+      "collection_link_copied": "הקישור לאוסף הועתק ללוח."
+    }
+  },
+  "wiki": {
+    "upgrade_flow": {
+      "title": "שדרג כדי לפתוח את הוויקי",
+      "description": "פתח דפים ציבוריים, היסטוריית גרסאות, דפים משותפים, שיתוף פעולה בזמן אמת ודפי סביבת עבודה עבור ויקי, מסמכים ארגוניים ובסיסי ידע עם Plane Pro.",
+      "upgrade_button": {
+        "text": "שדרג"
+      },
+      "learn_more_button": {
+        "text": "מידע נוסף"
+      },
+      "download_button": {
+        "text": "הורד נתונים",
+        "loading": "מוריד"
+      },
+      "tabs": {
+        "nested_pages": "דפים מקוננים",
+        "add_embeds": "הוסף הטמעות",
+        "publish_pages": "פרסם דפים",
+        "comments": "תגובות"
+      }
+    },
+    "nested_pages_download_banner": {
+      "title": "דפים מקוננים דורשים תוכנית בתשלום. שדרג כדי לפתוח."
+    }
+  }
+}

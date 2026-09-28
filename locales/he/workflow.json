@@ -1,0 +1,100 @@
+{
+  "workflows": {
+    "workflow_states": {
+      "work_item_creation": "אפשר יצירת פריטי עבודה חדשים",
+      "work_item_creation_disable_tooltip": "יצירת פריטי עבודה מושבתת במצב זה",
+      "default_state": "מצב ברירת מחדל מאפשר לכל החברים ליצור פריטי עבודה חדשים. לא ניתן לשנות זאת",
+      "state_change_count": "{count, plural, one {שינוי מצב מותר אחד} other {{count} שינויי מצב מותרים}}",
+      "movers_count": "{count, plural, one {מאשר רשום אחד} other {{count} מאשרים רשומים}}",
+      "state_changes": {
+        "label": {
+          "default": "הוסף שינוי מצב מותר",
+          "loading": "מוסיף שינוי מצב מותר"
+        },
+        "move_to": "שנה מצב ל",
+        "movers": {
+          "label": "כאשר נבדק על ידי",
+          "tooltip": "מאשרים הם אנשים שמורשים להעביר פריטי עבודה ממצב אחד לאחר.",
+          "add": "הוסף מאשרים"
+        }
+      }
+    },
+    "workflow_disabled": {
+      "title": "לא ניתן להעביר את פריט העבודה הזה לכאן."
+    },
+    "workflow_enabled": {
+      "label": "שינוי מצב"
+    },
+    "workflow_tree": {
+      "label": "עבור פריטי עבודה ב",
+      "state_change_label": "יכול להעביר אותו אל"
+    },
+    "empty_state": {
+      "upgrade": {
+        "title": "שלוט בכאוס של שינויים וביקורות עם זרימות עבודה.",
+        "description": "קבע כללים לאן העבודה שלך נעה, על ידי מי ומתי, עם זרימות עבודה ב-Plane."
+      }
+    },
+    "quick_actions": {
+      "view_change_history": "הצג היסטוריית שינויים",
+      "reset_workflow": "אפס זרימת עבודה"
+    },
+    "confirmation_modals": {
+      "reset_workflow": {
+        "title": "האם אתה בטוח שברצונך לאפס את זרימת העבודה הזו?",
+        "description": "אם תאפס את זרימת העבודה הזו, כל כללי שינוי המצב שלך יימחקו ותצטרך ליצור אותם מחדש כדי שיפעלו בפרויקט הזה."
+      },
+      "delete_state_change": {
+        "title": "האם אתה בטוח שברצונך למחוק את כלל שינוי המצב הזה?",
+        "description": "לאחר המחיקה לא ניתן לבטל את השינוי ותצטרך להגדיר את הכלל מחדש אם תרצה שהוא יפעל בפרויקט הזה."
+      }
+    },
+    "toasts": {
+      "enable_disable": {
+        "loading": "{action} זרימת עבודה",
+        "success": {
+          "title": "הצלחה",
+          "message": "זרימת העבודה {action} בהצלחה"
+        },
+        "error": {
+          "title": "שגיאה",
+          "message": "לא ניתן היה {action} את זרימת העבודה. נסה שוב."
+        }
+      },
+      "reset": {
+        "success": {
+          "title": "הצלחה",
+          "message": "זרימת העבודה אופסה בהצלחה"
+        },
+        "error": {
+          "title": "שגיאה באיפוס זרימת העבודה",
+          "message": "לא ניתן היה לאפס את זרימת העבודה. נסה שוב."
+        }
+      },
+      "add_state_change_rule": {
+        "error": {
+          "title": "שגיאה בהוספת כלל שינוי מצב",
+          "message": "לא ניתן היה להוסיף את כלל שינוי המצב. נסה שוב."
+        }
+      },
+      "modify_state_change_rule": {
+        "error": {
+          "title": "שגיאה בעריכת כלל שינוי מצב",
+          "message": "לא ניתן היה לערוך את כלל שינוי המצב. נסה שוב."
+        }
+      },
+      "remove_state_change_rule": {
+        "error": {
+          "title": "שגיאה בהסרת כלל שינוי מצב",
+          "message": "לא ניתן היה להסיר את כלל שינוי המצב. נסה שוב."
+        }
+      },
+      "modify_state_change_rule_movers": {
+        "error": {
+          "title": "שגיאה בעריכת המאשרים של כלל שינוי מצב",
+          "message": "לא ניתן היה לערוך את המאשרים של כלל שינוי המצב. נסה שוב."
+        }
+      }
+    }
+  }
+}

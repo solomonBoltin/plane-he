@@ -1,0 +1,65 @@
+{
+  "attachmentComponent": {
+    "uploader": {
+      "drag_and_drop": "גרור קבצים לכאן או לחץ להעלאה"
+    },
+    "errors": {
+      "file_too_large": {
+        "title": "הקובץ גדול מדי.",
+        "description": "הגודל המרבי לכל קובץ הוא {maxFileSize}MB"
+      },
+      "unsupported_file_type": {
+        "title": "סוג קובץ לא נתמך.",
+        "description": "ראה פורמטים נתמכים"
+      },
+      "default": {
+        "title": "ההעלאה נכשלה.",
+        "description": "משהו השתבש. נסה שוב."
+      }
+    },
+    "upgrade": {
+      "description": "שדרג את התוכנית שלך כדי לצפות בקובץ המצורף הזה."
+    },
+    "aria": {
+      "click_to_upload": "לחץ להעלאת קובץ מצורף"
+    }
+  },
+  "externalEmbedComponent": {
+    "block_menu": {
+      "convert_to_embed": "המר להטמעה",
+      "convert_to_link": "המר לקישור",
+      "convert_to_richcard": "המר לכרטיס עשיר"
+    },
+    "placeholder": {
+      "insert_embed": "הזן כאן קישור הטמעה מועדף, כגון סרטון YouTube, עיצוב Figma וכדומה.",
+      "link": "הזן או הדבק קישור"
+    },
+    "input_modal": {
+      "embed": "הטמעה",
+      "works_with_links": "עובד עם YouTube, Figma, Google Docs ועוד"
+    },
+    "error": {
+      "not_valid_link": "נא להזין כתובת URL תקינה."
+    }
+  },
+  "ai_block": {
+    "content": {
+      "placeholder": "תאר את התוכן של בלוק זה",
+      "generated_here": "תוכן ה-AI שלך ייווצר כאן"
+    },
+    "block_types": {
+      "placeholder": "בחר סוג בלוק",
+      "summarize_page": "סכם דף",
+      "custom_prompt": "הנחיה מותאמת אישית"
+    },
+    "actions": {
+      "discard": "בטל",
+      "generate": "צור",
+      "generating": "יוצר",
+      "rewriting": "מנסח מחדש",
+      "rewrite": "נסח מחדש",
+      "use_this": "השתמש בזה",
+      "refine": "שפר"
+    }
+  }
+}

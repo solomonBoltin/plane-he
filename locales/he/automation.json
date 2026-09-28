@@ -1,0 +1,273 @@
+{
+  "automations": {
+    "settings": {
+      "title": "אוטומציות מותאמות אישית",
+      "create_automation": "צור אוטומציה"
+    },
+    "scope": {
+      "label": "היקף",
+      "run_on": "הרצה על"
+    },
+    "trigger": {
+      "label": "טריגר",
+      "add_trigger": "הוסף טריגר",
+      "sidebar_header": "הגדרות טריגר",
+      "input_label": "מהו הטריגר של האוטומציה הזו?",
+      "input_placeholder": "בחר אפשרות",
+      "section_plane_events": "אירועי Plane",
+      "section_time_based": "לפי זמן",
+      "fixed_schedule": "לוח זמנים קבוע",
+      "schedule": {
+        "frequency": "תדירות",
+        "select_day": "בחר יום",
+        "day_of_month": "יום בחודש",
+        "monthly_every": "כל",
+        "monthly_day_aria": "יום {day}",
+        "time": "שעה",
+        "hour": "שעה",
+        "minute": "דקה",
+        "hour_suffix": "שע׳",
+        "minute_suffix": "דק׳",
+        "am": "AM",
+        "pm": "PM",
+        "timezone": "אזור זמן",
+        "timezone_placeholder": "בחר אזור זמן",
+        "frequency_daily": "יומי",
+        "frequency_weekly": "שבועי",
+        "frequency_monthly": "חודשי",
+        "on": "ב-",
+        "validation_weekly_day_required": "בחר לפחות יום אחד בשבוע.",
+        "validation_monthly_date_required": "בחר יום בחודש.",
+        "main_content_schedule_summary_daily": "כל יום בשעה {time} ({timezone}).",
+        "main_content_schedule_summary_weekly": "כל שבוע בימים {days} בשעה {time} ({timezone}).",
+        "main_content_schedule_summary_monthly": "כל חודש ביום {day} בשעה {time} ({timezone}).",
+        "schedule_mode": "מצב לוח זמנים",
+        "schedule_mode_fixed": "קבוע",
+        "schedule_mode_cron": "Cron",
+        "cron_expression_label": "הזן ביטוי Cron",
+        "cron_expression_placeholder": "0 9 * * 1-5",
+        "cron_invalid": "ביטוי Cron לא תקין.",
+        "cron_preview": "ביטוי Cron זה מריץ \"{description}\".",
+        "main_content_cron_summary": "{description} ({timezone})."
+      },
+      "button": {
+        "previous": "חזור",
+        "next": "הוסף פעולה"
+      },
+      "warning": {
+        "disabled_trigger_switching": "לא ניתן לשנות את סוג הטריגר לאחר יצירתו"
+      }
+    },
+    "condition": {
+      "label": "בהינתן",
+      "add_condition": "הוסף תנאי",
+      "adding_condition": "מוסיף תנאי"
+    },
+    "action": {
+      "label": "פעולה",
+      "add_action": "הוסף פעולה",
+      "sidebar_header": "פעולות",
+      "input_label": "מה האוטומציה עושה?",
+      "input_placeholder": "בחר אפשרות",
+      "handler_name": {
+        "add_comment": "הוסף תגובה",
+        "change_property": "שנה מאפיין",
+        "run_script": "הרץ סקריפט"
+      },
+      "configuration": {
+        "label": "הגדרות",
+        "change_property": {
+          "placeholders": {
+            "property_name": "בחר מאפיין",
+            "change_type": "בחר",
+            "property_value_select": "{count, plural, one{בחר ערך} other{בחר ערכים}}",
+            "property_value_select_date": "בחר תאריך"
+          },
+          "validation": {
+            "property_name_required": "שם המאפיין הוא שדה חובה",
+            "change_type_required": "סוג השינוי הוא שדה חובה",
+            "property_value_required": "ערך המאפיין הוא שדה חובה"
+          }
+        }
+      },
+      "comment_block": {
+        "title": "הוסף תגובה"
+      },
+      "run_script_block": {
+        "title": "הרץ סקריפט"
+      },
+      "change_property_block": {
+        "title": "שנה מאפיין"
+      },
+      "validation": {
+        "delete_only_action": "השבת את האוטומציה לפני מחיקת הפעולה היחידה שלה."
+      }
+    },
+    "conjunctions": {
+      "and": "וגם",
+      "or": "או",
+      "if": "אם",
+      "then": "אז"
+    },
+    "enable": {
+      "alert": "הקש על 'הפעל' כשהאוטומציה שלך מוכנה. לאחר ההפעלה, האוטומציה תהיה מוכנה להרצה.",
+      "validation": {
+        "required": "כדי להפעיל אוטומציה היא חייבת לכלול טריגר ולפחות פעולה אחת."
+      }
+    },
+    "delete": {
+      "validation": {
+        "enabled": "יש להשבית את האוטומציה לפני מחיקתה."
+      }
+    },
+    "table": {
+      "title": "שם האוטומציה",
+      "scope": "היקף",
+      "projects": "פרויקטים",
+      "last_run_on": "הרצה אחרונה ב-",
+      "created_on": "נוצר ב-",
+      "last_updated_on": "עודכן לאחרונה ב-",
+      "last_run_status": "מצב ההרצה האחרונה",
+      "average_duration": "משך ממוצע",
+      "owner": "אחראי",
+      "executions": "הרצות"
+    },
+    "create_modal": {
+      "heading": {
+        "create": "צור אוטומציה",
+        "update": "עדכן אוטומציה"
+      },
+      "title": {
+        "placeholder": "תן שם לאוטומציה שלך.",
+        "required_error": "שם הוא שדה חובה"
+      },
+      "description": {
+        "placeholder": "תאר את האוטומציה שלך."
+      },
+      "submit_button": {
+        "create": "צור אוטומציה",
+        "update": "עדכן אוטומציה"
+      }
+    },
+    "delete_modal": {
+      "heading": "מחק אוטומציה"
+    },
+    "activity": {
+      "filters": {
+        "show_fails": "הצג כשלים",
+        "all": "הכול",
+        "only_activity": "פעילות בלבד",
+        "only_run_history": "היסטוריית הרצות בלבד"
+      },
+      "run_history": {
+        "initiator": "מפעיל"
+      }
+    },
+    "toasts": {
+      "create": {
+        "success": {
+          "title": "הצלחה!",
+          "message": "האוטומציה נוצרה בהצלחה."
+        },
+        "error": {
+          "title": "שגיאה!",
+          "message": "יצירת האוטומציה נכשלה."
+        }
+      },
+      "update": {
+        "success": {
+          "title": "הצלחה!",
+          "message": "האוטומציה עודכנה בהצלחה."
+        },
+        "error": {
+          "title": "שגיאה!",
+          "message": "עדכון האוטומציה נכשל."
+        }
+      },
+      "enable": {
+        "success": {
+          "title": "הצלחה!",
+          "message": "האוטומציה הופעלה בהצלחה."
+        },
+        "error": {
+          "title": "שגיאה!",
+          "message": "הפעלת האוטומציה נכשלה."
+        }
+      },
+      "disable": {
+        "success": {
+          "title": "הצלחה!",
+          "message": "האוטומציה הושבתה בהצלחה."
+        },
+        "error": {
+          "title": "שגיאה!",
+          "message": "השבתת האוטומציה נכשלה."
+        }
+      },
+      "delete": {
+        "success": {
+          "title": "האוטומציה נמחקה",
+          "message": "{name}, האוטומציה, נמחקה כעת מהפרויקט שלך."
+        },
+        "error": {
+          "title": "לא הצלחנו למחוק את האוטומציה הזו הפעם.",
+          "message": "נסה למחוק אותה שוב או חזור אליה מאוחר יותר. אם גם אז לא תצליח למחוק אותה, פנה אלינו."
+        }
+      },
+      "action": {
+        "create": {
+          "error": {
+            "title": "שגיאה!",
+            "message": "יצירת הפעולה נכשלה. נסה שוב!"
+          }
+        },
+        "update": {
+          "error": {
+            "title": "שגיאה!",
+            "message": "עדכון הפעולה נכשל. נסה שוב!"
+          }
+        }
+      }
+    },
+    "empty_state": {
+      "no_automations": {
+        "title": "אין עדיין אוטומציות להצגה.",
+        "description": "אוטומציות עוזרות לך להיפטר ממשימות חוזרות על ידי הגדרת טריגרים, תנאים ופעולות. צור אחת כדי לחסוך זמן ולשמור על העבודה בתנועה."
+      },
+      "upgrade": {
+        "title": "אוטומציות",
+        "description": "אוטומציות הן דרך להפוך משימות בפרויקט שלך לאוטומטיות.",
+        "sub_description": "קבל בחזרה 80% מזמן הניהול שלך כשאתה עובד עם אוטומציות."
+      }
+    },
+    "global_automations": {
+      "project_select": {
+        "label": "בחר את הפרויקטים שעליהם תרוץ האוטומציה",
+        "all_projects": {
+          "label": "כל הפרויקטים",
+          "description": "האוטומציה תרוץ עבור כל הפרויקטים במרחב העבודה."
+        },
+        "select_projects": {
+          "label": "בחר פרויקטים",
+          "description": "האוטומציה תרוץ עבור הפרויקטים הנבחרים במרחב העבודה.",
+          "placeholder": "בחר פרויקטים"
+        }
+      },
+      "settings": {
+        "sidebar_label": "אוטומציות",
+        "title": "אוטומציות",
+        "description": "אחד תהליכים בכל מרחב העבודה עם אוטומציות גלובליות."
+      },
+      "table": {
+        "scope": {
+          "global": "גלובלי",
+          "project": {
+            "label": "פרויקט",
+            "multiple": "מרובים",
+            "all": "הכול"
+          }
+        }
+      }
+    }
+  }
+}

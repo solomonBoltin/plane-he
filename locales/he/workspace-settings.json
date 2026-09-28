@@ -1,0 +1,508 @@
+{
+  "workspace_settings": {
+    "label": "הגדרות מרחב עבודה",
+    "page_label": "{workspace} - הגדרות כלליות",
+    "key_created": "המפתח נוצר",
+    "copy_key": "העתק ושמור את מפתח הסוד הזה ב-Plane Pages. לא תוכל לראות את המפתח הזה לאחר שתלחץ על סגור. קובץ CSV המכיל את המפתח הורד.",
+    "token_copied": "הטוקן הועתק ללוח.",
+    "settings": {
+      "general": {
+        "title": "כללי",
+        "upload_logo": "העלה לוגו",
+        "edit_logo": "ערוך לוגו",
+        "name": "שם מרחב העבודה",
+        "company_size": "גודל החברה",
+        "url": "כתובת ה-URL של מרחב העבודה",
+        "workspace_timezone": "אזור הזמן של מרחב העבודה",
+        "update_workspace": "עדכן מרחב עבודה",
+        "delete_workspace": "מחק את מרחב העבודה הזה",
+        "delete_workspace_description": "מחיקת מרחב עבודה תסיר לצמיתות את כל הנתונים והמשאבים שבו, ולא ניתן יהיה לשחזרם.",
+        "delete_btn": "מחק את מרחב העבודה הזה",
+        "delete_modal": {
+          "title": "האם אתה בטוח שברצונך למחוק את מרחב העבודה הזה?",
+          "description": "יש לך תקופת ניסיון פעילה באחד מהמסלולים בתשלום. יש לבטל אותה תחילה כדי להמשיך.",
+          "dismiss": "סגור",
+          "cancel": "בטל ניסיון",
+          "success_title": "מרחב העבודה נמחק.",
+          "success_message": "תועבר בקרוב לעמוד הפרופיל שלך.",
+          "error_title": "זה לא עבד.",
+          "error_message": "נסה שוב, בבקשה."
+        },
+        "errors": {
+          "name": {
+            "required": "יש להזין שם",
+            "max_length": "שם מרחב העבודה לא יעלה על 80 תווים"
+          },
+          "company_size": {
+            "required": "יש לבחור גודל חברה",
+            "select_a_range": "בחר גודל ארגון"
+          }
+        }
+      },
+      "members": {
+        "title": "חברים",
+        "add_member": "הוסף חבר",
+        "pending_invites": "הזמנות ממתינות",
+        "invitations_sent_successfully": "ההזמנות נשלחו בהצלחה",
+        "leave_confirmation": "האם אתה בטוח שברצונך לעזוב את מרחב העבודה? לא תהיה לך יותר גישה למרחב העבודה הזה. לא ניתן לבטל פעולה זו.",
+        "details": {
+          "full_name": "שם מלא",
+          "display_name": "שם תצוגה",
+          "email_address": "כתובת דוא\"ל",
+          "account_type": "סוג חשבון",
+          "authentication": "אימות",
+          "joining_date": "תאריך הצטרפות"
+        },
+        "modal": {
+          "title": "הזמן אנשים לשיתוף פעולה",
+          "description": "הזמן אנשים לשתף פעולה במרחב העבודה שלך.",
+          "button": "שלח הזמנות",
+          "button_loading": "שולח הזמנות",
+          "placeholder": "name@company.com",
+          "errors": {
+            "required": "יש להזין כתובת דוא\"ל כדי להזמין אותם.",
+            "invalid": "כתובת הדוא\"ל אינה תקינה"
+          }
+        }
+      },
+      "billing_and_plans": {
+        "heading": "חיוב ומסלולים",
+        "description": "בחר את המסלול שלך, נהל מנויים ושדרג בקלות ככל שהצרכים שלך גדלים.",
+        "title": "חיוב ומסלולים",
+        "current_plan": "מסלול נוכחי",
+        "free_plan": "אתה משתמש כעת במסלול החינמי",
+        "view_plans": "הצג מסלולים"
+      },
+      "exports": {
+        "heading": "ייצוא",
+        "description": "ייצא את נתוני הפרויקט שלך בפורמטים שונים וגש להיסטוריית הייצוא שלך עם קישורי הורדה.",
+        "title": "ייצוא",
+        "exporting": "מייצא",
+        "previous_exports": "ייצוא קודם",
+        "export_separate_files": "ייצא את הנתונים לקבצים נפרדים",
+        "exporting_projects": "מייצא פרויקט",
+        "format": "פורמט",
+        "filters_info": "החל מסננים כדי לייצא פריטי עבודה מסוימים לפי הקריטריונים שלך.",
+        "modal": {
+          "title": "ייצוא אל",
+          "toasts": {
+            "success": {
+              "title": "הייצוא הצליח",
+              "message": "תוכל להוריד את {entity} המיוצא מהייצוא הקודם."
+            },
+            "error": {
+              "title": "הייצוא נכשל",
+              "message": "הייצוא לא הצליח. נסה שוב."
+            }
+          }
+        }
+      },
+      "webhooks": {
+        "heading": "Webhooks",
+        "description": "אוטומט התראות לשירותים חיצוניים כאשר מתרחשים אירועים בפרויקט.",
+        "title": "Webhooks",
+        "add_webhook": "הוסף Webhook",
+        "modal": {
+          "title": "צור Webhook",
+          "details": "פרטי ה-Webhook",
+          "payload": "כתובת URL של ה-Payload",
+          "question": "אילו אירועים יפעילו את ה-Webhook הזה?",
+          "error": "יש להזין URL"
+        },
+        "secret_key": {
+          "title": "מפתח סוד",
+          "message": "צור טוקן לחתימה על ה-Payload של ה-Webhook"
+        },
+        "options": {
+          "all": "שלח לי הכל",
+          "individual": "בחר אירועים ספציפיים"
+        },
+        "toasts": {
+          "created": {
+            "title": "ה-Webhook נוצר",
+            "message": "ה-Webhook נוצר בהצלחה"
+          },
+          "not_created": {
+            "title": "ה-Webhook לא נוצר",
+            "message": "לא ניתן היה ליצור את ה-Webhook"
+          },
+          "updated": {
+            "title": "ה-Webhook עודכן",
+            "message": "ה-Webhook עודכן בהצלחה"
+          },
+          "not_updated": {
+            "title": "ה-Webhook לא עודכן",
+            "message": "לא ניתן היה לעדכן את ה-Webhook"
+          },
+          "removed": {
+            "title": "ה-Webhook הוסר",
+            "message": "ה-Webhook הוסר בהצלחה"
+          },
+          "not_removed": {
+            "title": "ה-Webhook לא הוסר",
+            "message": "לא ניתן היה להסיר את ה-Webhook"
+          },
+          "secret_key_copied": {
+            "message": "מפתח הסוד הועתק ללוח."
+          },
+          "secret_key_not_copied": {
+            "message": "אירעה שגיאה בעת העתקת מפתח הסוד."
+          }
+        }
+      },
+      "api_tokens": {
+        "heading": "טוקני גישה",
+        "description": "צור טוקני API מאובטחים כדי לחבר את הנתונים שלך למערכות ולאפליקציות חיצוניות.",
+        "title": "טוקני גישה",
+        "add_token": "הוסף טוקן גישה",
+        "create_token": "צור טוקן",
+        "never_expires": "ללא תפוגה",
+        "generate_token": "צור טוקן",
+        "generating": "יוצר",
+        "delete": {
+          "title": "מחק טוקן גישה",
+          "description": "כל אפליקציה שמשתמשת בטוקן הזה תאבד את הגישה לנתוני Plane. לא ניתן לבטל פעולה זו.",
+          "success": {
+            "title": "הצלחה!",
+            "message": "הטוקן נמחק בהצלחה"
+          },
+          "error": {
+            "title": "שגיאה!",
+            "message": "לא ניתן היה למחוק את הטוקן"
+          }
+        }
+      },
+      "integrations": {
+        "title": "אינטגרציות",
+        "heading": "אינטגרציות",
+        "description": "התחבר לכלים ולשירותים פופולריים כדי לסנכרן את העבודה שלך בכל המערכת האקולוגית של זרימת העבודה שלך.",
+        "page_title": "עבד עם נתוני ה-Plane שלך באפליקציות זמינות או באפליקציות משלך.",
+        "page_description": "הצג את כל האינטגרציות שנמצאות בשימוש במרחב העבודה הזה או על ידך."
+      },
+      "imports": {
+        "title": "ייבוא",
+        "heading": "ייבוא",
+        "description": "התחבר וייבא נתונים מכלי ניהול הפרויקטים הקיימים שלך כדי לייעל את שילוב זרימת העבודה שלך."
+      },
+      "worklogs": {
+        "title": "יומני עבודה",
+        "heading": "יומני עבודה",
+        "description": "הורד יומני עבודה (Worklogs), הידועים גם כדוחות שעות, עבור כל אחד ובכל פרויקט."
+      },
+      "group_syncing": {
+        "title": "סנכרון קבוצות",
+        "heading": "סנכרון קבוצות",
+        "description": "קשר קבוצות של ספק הזהויות לפרויקטים ולתפקידים. הגישה של המשתמשים מתעדכנת אוטומטית כשחברות בקבוצה משתנה ב-IdP שלך, מה שמפשט את תהליכי הקליטה והעזיבה.",
+        "enable": {
+          "title": "הפעל סנכרון קבוצות",
+          "description": "הוסף משתמשים לפרויקטים אוטומטית לפי קבוצות של ספק הזהויות."
+        },
+        "config": {
+          "title": "הגדר סנכרון קבוצות",
+          "description": "הגדר כיצד קבוצות של ספק הזהויות ממופות לפרויקטים ולתפקידים.",
+          "sync_on_login": {
+            "title": "סנכרון בכניסה",
+            "description": "עדכן חברות בקבוצות וגישה לפרויקטים כאשר משתמש נכנס."
+          },
+          "sync_offline": {
+            "title": "סנכרון לא מקוון",
+            "description": "מריץ סנכרון אוטומטית כל שש שעות, בלי להמתין לכניסה של משתמשים."
+          },
+          "auto_remove": {
+            "title": "הסרה אוטומטית",
+            "description": "הסר משתמשים מפרויקטים אוטומטית כשהם כבר לא תואמים את הקבוצה."
+          },
+          "group_attribute_key": {
+            "title": "מפתח מאפיין קבוצה",
+            "description": "מאפיין ספק הזהויות המשמש לזיהוי ולסנכרון קבוצות משתמשים.",
+            "placeholder": "Groups"
+          }
+        },
+        "group_mapping": {
+          "title": "מיפוי קבוצות",
+          "description": "קשר קבוצות של ספק הזהויות לפרויקטים ולתפקידים.",
+          "button_text": "הוסף סנכרון קבוצות חדש"
+        },
+        "toast": {
+          "updating": "מעדכן את תכונת סנכרון הקבוצות",
+          "success": "תכונת סנכרון הקבוצות עודכנה בהצלחה.",
+          "error": "עדכון תכונת סנכרון הקבוצות נכשל!"
+        },
+        "delete_modal": {
+          "title": "מחק סנכרון קבוצות",
+          "content": "משתמשים חדשים מקבוצת הזהויות הזו לא יתווספו עוד לפרויקט. משתמשים שכבר נוספו ישמרו על התפקיד הנוכחי שלהם."
+        },
+        "modal": {
+          "idp_group_name": {
+            "text": "קבוצת משתמשים",
+            "required": "יש להזין קבוצת משתמשים",
+            "placeholder": "הזן את שמות הקבוצות ב-IdP"
+          },
+          "project": {
+            "text": "פרויקט",
+            "required": "יש לבחור פרויקט",
+            "placeholder": "בחר פרויקט"
+          },
+          "default_role": {
+            "text": "תפקיד בפרויקט",
+            "required": "יש לבחור תפקיד בפרויקט",
+            "placeholder": "בחר תפקיד בפרויקט"
+          }
+        }
+      },
+      "identity": {
+        "title": "זהות",
+        "heading": "זהות",
+        "description": "הגדר את הדומיין שלך והפעל כניסה עם SSO (Single Sign-On)"
+      },
+      "project_states": {
+        "title": "מצבי פרויקט",
+        "heading": "הצג סקירת התקדמות לכל הפרויקטים.",
+        "description": "מצבי פרויקט היא תכונה ייחודית ל-Plane למעקב אחר ההתקדמות של כל הפרויקטים שלך לפי כל מאפיין של פרויקט.",
+        "go_to_settings": "עבור להגדרות"
+      },
+      "projects": {
+        "title": "פרויקטים",
+        "description": "נהל מצבי פרויקט, הפעל תוויות פרויקט ותצורות נוספות.",
+        "tabs": {
+          "states": "מצבי פרויקט",
+          "labels": "תוויות פרויקט"
+        }
+      },
+      "templates": {
+        "title": "תבניות",
+        "heading": "תבניות",
+        "description": "חסוך 80% מהזמן ביצירת פרויקטים, פריטי עבודה ועמודים כשאתה משתמש בתבניות."
+      },
+      "relations": {
+        "title": "קשרים",
+        "heading": "קשרים",
+        "description": "צור ונהל סוגי קשרים המחברים פריטי עבודה ברחבי מרחב העבודה שלך."
+      },
+      "cancel_trial": {
+        "title": "בטל תחילה את תקופת הניסיון.",
+        "description": "יש לך תקופת ניסיון פעילה באחד מהמסלולים בתשלום. יש לבטל אותה תחילה כדי להמשיך.",
+        "dismiss": "סגור",
+        "cancel": "בטל ניסיון",
+        "cancel_success_title": "תקופת הניסיון בוטלה.",
+        "cancel_success_message": "כעת תוכל למחוק את מרחב העבודה.",
+        "cancel_error_title": "זה לא עבד.",
+        "cancel_error_message": "נסה שוב, בבקשה."
+      },
+      "applications": {
+        "internal": "פנימי",
+        "title": "אפליקציות",
+        "applicationId_copied": "מזהה האפליקציה הועתק ללוח",
+        "clientId_copied": "ה-Client ID הועתק ללוח",
+        "clientSecret_copied": "ה-Client Secret הועתק ללוח",
+        "third_party_apps": "אפליקציות צד שלישי",
+        "your_apps": "האפליקציות שלך",
+        "connect": "התחבר",
+        "connected": "מחובר",
+        "disconnect": "נתק",
+        "install": "התקן",
+        "installed": "מותקן",
+        "configure": "הגדר",
+        "app_available": "הפכת את האפליקציה הזו לזמינה לשימוש עם מרחב עבודה ב-Plane",
+        "app_credentials_regenrated": {
+          "title": "אישורי האפליקציה נוצרו מחדש בהצלחה",
+          "description": "החלף את ה-Client Secret בכל מקום שבו הוא בשימוש. הסוד הקודם אינו תקף יותר."
+        },
+        "app_created": {
+          "title": "האפליקציה נוצרה בהצלחה",
+          "description": "השתמש באישורים כדי להתקין את האפליקציה במרחב עבודה ב-Plane"
+        },
+        "installed_apps": "אפליקציות מותקנות",
+        "all_apps": "כל האפליקציות",
+        "internal_apps": "אפליקציות פנימיות",
+        "app_name_title": "שם האפליקציה",
+        "app_description_title": {
+          "label": "תיאור ארוך",
+          "placeholder": "כתוב תיאור ארוך לחנות האפליקציות. הקש ‘/’ לפקודות."
+        },
+        "authorization_grant_type": {
+          "title": "סוג חיבור",
+          "description": "בחר אם האפליקציה תותקן פעם אחת עבור מרחב העבודה או שכל משתמש יוכל לחבר את החשבון שלו"
+        },
+        "website": {
+          "title": "אתר אינטרנט",
+          "description": "קישור לאתר של האפליקציה שלך.",
+          "placeholder": "https://example.com"
+        },
+        "app_maker": {
+          "title": "מפתח האפליקציה",
+          "description": "האדם או הארגון שיצרו את האפליקציה."
+        },
+        "app_maker_error": "יש להזין שם מפתח",
+        "setup_url": {
+          "label": "כתובת URL להגדרה",
+          "description": "משתמשים יופנו לכתובת ה-URL הזו כאשר יתקינו את האפליקציה.",
+          "placeholder": "https://example.com/setup"
+        },
+        "webhook_url": {
+          "label": "כתובת URL של Webhook",
+          "description": "לכאן נשלח אירועי Webhook ועדכונים ממרחבי העבודה שבהם האפליקציה שלך מותקנת.",
+          "placeholder": "https://example.com/webhook"
+        },
+        "webhook_secret": {
+          "label": "סוד ה-Webhook",
+          "description": "סוד המשמש לאימות בקשות Webhook נכנסות.",
+          "placeholder": "הזן מפתח סוד אקראי"
+        },
+        "redirect_uris": {
+          "label": "כתובות Redirect URI (מופרדות ברווח)",
+          "description": "משתמשים יופנו לנתיב הזה לאחר שיאומתו מול Plane.",
+          "placeholder": "https://example.com https://example.com/"
+        },
+        "app_available_description": "חבר מרחב עבודה ב-Plane כדי להתחיל להשתמש בו",
+        "client_id_and_secret": "Client ID ו-Client Secret",
+        "client_id_and_secret_description": "העתק ושמור את מפתח הסוד הזה ב-Pages. לא תוכל לראות את המפתח הזה שוב לאחר שתלחץ על סגור.",
+        "client_id_and_secret_download": "תוכל להוריד מכאן קובץ CSV עם המפתח.",
+        "application_id": "מזהה אפליקציה",
+        "client_id": "Client ID",
+        "client_secret": "Client Secret",
+        "export_as_csv": "ייצא כ-CSV",
+        "slug_already_exists": "ה-Slug כבר קיים",
+        "failed_to_create_application": "יצירת האפליקציה נכשלה",
+        "upload_logo": "העלה לוגו",
+        "app_name_error": "יש להזין שם אפליקציה",
+        "app_short_description_title": "תיאור קצר",
+        "app_short_description_error": "יש להזין תיאור קצר לאפליקציה",
+        "app_description_error": "יש להזין תיאור לאפליקציה",
+        "app_slug_title": "ה-Slug של האפליקציה",
+        "app_slug_error": "יש להזין Slug לאפליקציה",
+        "invalid_website_error": "אתר לא תקין",
+        "webhook_url_title": "כתובת URL של Webhook",
+        "webhook_url_error": "יש להזין כתובת URL של Webhook",
+        "invalid_webhook_url_error": "כתובת ה-URL של ה-Webhook אינה תקינה",
+        "redirect_uris_title": "כתובות Redirect URI",
+        "redirect_uris_error": "יש להזין כתובות Redirect URI",
+        "invalid_redirect_uris_error": "כתובות ה-Redirect URI אינן תקינות",
+        "redirect_uris_description": "הזן כתובות URI מופרדות ברווח שאליהן האפליקציה תפנה את המשתמש לאחר הפעולה, לדוגמה https://example.com https://example.com/",
+        "authorized_javascript_origins_title": "מקורות Javascript מאושרים",
+        "authorized_javascript_origins_error": "יש להזין מקורות Javascript מאושרים",
+        "invalid_authorized_javascript_origins_error": "מקורות ה-Javascript המאושרים אינם תקינים",
+        "authorized_javascript_origins_description": "הזן מקורות מופרדים ברווח שמהם האפליקציה תורשה לבצע בקשות, לדוגמה app.com example.com",
+        "create_app": "צור אפליקציה",
+        "update_app": "עדכן אפליקציה",
+        "build_your_own_app": "בנה אפליקציה משלך",
+        "edit_app_details": "ערוך פרטי אפליקציה",
+        "regenerate_client_secret_description": "צור מחדש את ה-Client Secret. אם תיצור את הסוד מחדש, תוכל להעתיק את המפתח או להוריד אותו לקובץ CSV מיד לאחר מכן.",
+        "regenerate_client_secret": "צור מחדש Client Secret",
+        "regenerate_client_secret_confirm_title": "האם אתה בטוח שברצונך ליצור מחדש את ה-Client Secret?",
+        "regenerate_client_secret_confirm_description": "אפליקציה שמשתמשת בסוד הזה תפסיק לעבוד. יהיה עליך לעדכן את הסוד באפליקציה.",
+        "regenerate_client_secret_confirm_cancel": "בטל",
+        "regenerate_client_secret_confirm_regenerate": "צור מחדש",
+        "read_only_access_to_workspace": "גישת קריאה בלבד למרחב העבודה שלך",
+        "write_access_to_workspace": "גישת כתיבה למרחב העבודה שלך",
+        "read_only_access_to_user_profile": "גישת קריאה בלבד לפרופיל המשתמש שלך",
+        "write_access_to_user_profile": "גישת כתיבה לפרופיל המשתמש שלך",
+        "connect_app_to_workspace": "חבר את {app} למרחב העבודה {workspace} שלך",
+        "user_permissions": "הרשאות משתמש",
+        "user_permissions_description": "הרשאות משתמש משמשות להענקת גישה לפרופיל של המשתמש.",
+        "workspace_permissions": "הרשאות מרחב עבודה",
+        "workspace_permissions_description": "הרשאות מרחב עבודה משמשות להענקת גישה למרחב העבודה.",
+        "with_the_permissions": "עם ההרשאות",
+        "app_consent_title": "{app} מבקשת גישה למרחב העבודה ולפרופיל שלך ב-Plane.",
+        "choose_workspace_to_connect_app_with": "בחר מרחב עבודה שאליו תחבר את האפליקציה",
+        "app_consent_workspace_permissions_title": "{app} מבקשת",
+        "app_consent_user_permissions_title": "{app} יכולה גם לבקש הרשאה של משתמש למשאבים הבאים. הרשאות אלו יתבקשו ויאושרו על ידי משתמש בלבד.",
+        "app_consent_accept_title": "בקבלתך, אתה",
+        "app_consent_accept_1": "מעניק לאפליקציה גישה לנתוני ה-Plane שלך בכל מקום שבו תוכל להשתמש באפליקציה, בתוך Plane ומחוצה לו",
+        "app_consent_accept_2": "מסכים למדיניות הפרטיות ולתנאי השימוש של {app}",
+        "accepting": "מאשר...",
+        "accept": "אשר",
+        "categories": "קטגוריות",
+        "select_app_categories": "בחר קטגוריות לאפליקציה",
+        "categories_title": "קטגוריות",
+        "categories_error": "יש לבחור קטגוריות",
+        "invalid_categories_error": "קטגוריות לא תקינות",
+        "categories_description": "בחר את הקטגוריות המתארות את האפליקציה בצורה הטובה ביותר",
+        "supported_plans": "מסלולים נתמכים",
+        "supported_plans_description": "בחר את מסלולי מרחב העבודה שיכולים להתקין את האפליקציה הזו. השאר ריק כדי לאפשר את כל המסלולים.",
+        "select_plans": "בחר מסלולים",
+        "privacy_policy_url_title": "כתובת URL של מדיניות פרטיות",
+        "privacy_policy_url_error": "יש להזין כתובת URL של מדיניות פרטיות",
+        "invalid_privacy_policy_url_error": "כתובת ה-URL של מדיניות הפרטיות אינה תקינה",
+        "terms_of_service_url_title": "כתובת URL של תנאי שימוש",
+        "terms_of_service_url_error": "יש להזין כתובת URL של תנאי שימוש",
+        "invalid_terms_of_service_url_error": "כתובת ה-URL של תנאי השימוש אינה תקינה",
+        "support_url_title": "כתובת URL של תמיכה",
+        "support_url_error": "יש להזין כתובת URL של תמיכה",
+        "invalid_support_url_error": "כתובת ה-URL של התמיכה אינה תקינה",
+        "video_url_title": "כתובת URL של סרטון",
+        "video_url_error": "יש להזין כתובת URL של סרטון",
+        "invalid_video_url_error": "כתובת ה-URL של הסרטון אינה תקינה",
+        "setup_url_error": "יש להזין כתובת URL להגדרה",
+        "invalid_setup_url_error": "כתובת ה-URL להגדרה אינה תקינה",
+        "configuration_url_title": "כתובת URL לתצורה",
+        "configuration_url_error": "יש להזין כתובת URL לתצורה",
+        "invalid_configuration_url_error": "כתובת ה-URL לתצורה אינה תקינה",
+        "contact_email_title": "דוא\"ל ליצירת קשר",
+        "contact_email_error": "יש להזין דוא\"ל ליצירת קשר",
+        "invalid_contact_email_error": "כתובת הדוא\"ל ליצירת קשר אינה תקינה",
+        "upload_attachments": "העלה קבצים מצורפים",
+        "uploading_images": "מעלה {count} תמונה{count, plural, one {} other {ות}}",
+        "drop_images_here": "גרור תמונות לכאן",
+        "click_to_upload_images": "לחץ כדי להעלות תמונות",
+        "invalid_file_or_exceeds_size_limit": "קובץ לא תקין או חורג ממגבלת הגודל ({size} MB)",
+        "uploading": "מעלה...",
+        "upload_and_save": "העלה ושמור",
+        "app_consent_no_access_title": "בקשה להתקנה",
+        "app_consent_no_access_description": "ניתן להתקין את האפליקציה הזו רק לאחר שמנהל מרחב עבודה מתקין אותה. צור קשר עם מנהל מרחב העבודה כדי להמשיך.",
+        "app_consent_unapproved_title": "האפליקציה הזו טרם נבדקה או אושרה על ידי Plane.",
+        "app_consent_unapproved_description": "ודא שאתה סומך על האפליקציה הזו לפני שתחבר אותה למרחב העבודה שלך.",
+        "go_to_app": "עבור לאפליקציה",
+        "enable_app_mentions": "הפעל אזכורים של אפליקציות",
+        "enable_app_mentions_tooltip": "כשזה מופעל, משתמשים יכולים לאזכר או להקצות פריטי עבודה לאפליקציה הזו.",
+        "scopes": "היקפי הרשאה",
+        "select_scopes": "בחר היקפי הרשאה",
+        "read_access_to": "גישת קריאה בלבד אל",
+        "write_access_to": "גישת כתיבה אל",
+        "global_permission_expiration": "היקפי ההרשאה הגלובליים עומדים לפוג בקרוב. השתמש בהיקפים מפורטים במקום. לדוגמה, השתמש ב-project:read במקום בקריאה גלובלית.",
+        "selected_scopes": "{count} נבחרו",
+        "scopes_and_permissions": "היקפי הרשאה והרשאות",
+        "read": "קריאה",
+        "write": "כתיבה",
+        "scope_description": {
+          "projects": "גישה לפרויקטים ולכל הישויות הקשורות לפרויקט",
+          "wiki": "גישה ל-Wiki ולכל הישויות הקשורות ל-Wiki",
+          "workspaces": "גישה למרחבי עבודה ולכל הישויות הקשורות למרחב עבודה",
+          "stickies": "גישה לפתקים דביקים ולכל הישויות הקשורות אליהם",
+          "profile": "גישה למידע בפרופיל המשתמש",
+          "agents": "גישה לסוכנים ולכל הישויות הקשורות לסוכנים",
+          "assets": "גישה לנכסים ולכל הישויות הקשורות לנכסים"
+        }
+      },
+      "plane-intelligence": {
+        "title": "Plane AI",
+        "heading": "Plane AI",
+        "description": "ראה כיצד העבודה שלך נעשית חכמה ומהירה יותר עם בינה מלאכותית המחוברת באופן מובנה לעבודה שלך ולבסיס הידע שלך. "
+      },
+      "runners": {
+        "title": "Plane Runner",
+        "heading": "סקריפטים",
+        "new_script": "סקריפט חדש",
+        "description": "אוטומט את זרימות העבודה שלך עם סקריפטים מותאמים אישית וכללי אוטומציה."
+      }
+    },
+    "empty_state": {
+      "api_tokens": {
+        "title": "לא נוצרו טוקני גישה",
+        "description": "ניתן להשתמש ב-API של Plane כדי לחבר את הנתונים שלך ב-Plane לכל מערכת חיצונית. צור טוקן כדי להתחיל."
+      },
+      "webhooks": {
+        "title": "לא נוספו Webhooks",
+        "description": "צור Webhooks כדי לקבל עדכונים בזמן אמת ולהפוך פעולות לאוטומטיות."
+      },
+      "exports": {
+        "title": "אין עדיין ייצוא",
+        "description": "בכל פעם שתייצא, יישמר כאן גם עותק לעיונך."
+      },
+      "imports": {
+        "title": "אין עדיין ייבוא",
+        "description": "מצא כאן את כל הייבוא הקודם שלך והורד אותו."
+      }
+    }
+  }
+}

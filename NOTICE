@@ -1,0 +1,10 @@
+plane-he — Hebrew locale and RTL support for Plane
+Copyright (C) 2026 the office of Bina Solutions
+
+This work is a derivative of Plane (https://github.com/makeplane/plane),
+Copyright (c) 2023-present Plane Software, Inc. and contributors,
+licensed under the GNU Affero General Public License v3.0 (see LICENSE.txt).
+
+It is distributed under the same licence. The complete corresponding source of this modified
+version is this repository: the overrides in `overrides/` are the whole of the modification to
+Plane's source, and `locales/he/` is the added translation.

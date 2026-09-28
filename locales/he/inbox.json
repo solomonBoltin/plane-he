@@ -1,0 +1,87 @@
+{
+  "inbox_issue": {
+    "status": {
+      "pending": {
+        "title": "ממתין",
+        "description": "ממתין"
+      },
+      "declined": {
+        "title": "נדחה",
+        "description": "נדחה"
+      },
+      "snoozed": {
+        "title": "מושהה",
+        "description": "נותרו {days, plural, one{# יום} other{# ימים}}"
+      },
+      "accepted": {
+        "title": "אושר",
+        "description": "אושר"
+      },
+      "duplicate": {
+        "title": "כפילות",
+        "description": "כפילות"
+      }
+    },
+    "modals": {
+      "decline": {
+        "title": "דחה פריט עבודה",
+        "content": "האם אתה בטוח שברצונך לדחות את פריט העבודה {value}?"
+      },
+      "delete": {
+        "title": "מחק פריט עבודה",
+        "content": "האם אתה בטוח שברצונך למחוק את פריט העבודה {value}?",
+        "success": "פריט העבודה נמחק בהצלחה"
+      }
+    },
+    "errors": {
+      "snooze_permission": "רק מנהלי פרויקט יכולים להשהות או לבטל השהיה של פריטי עבודה",
+      "accept_permission": "רק מנהלי פרויקט יכולים לאשר פריטי עבודה",
+      "decline_permission": "רק מנהלי פרויקט יכולים לדחות פריטי עבודה"
+    },
+    "actions": {
+      "accept": "אשר",
+      "decline": "דחה",
+      "snooze": "השהה",
+      "unsnooze": "בטל השהיה",
+      "copy": "העתק קישור לפריט עבודה",
+      "delete": "מחק",
+      "open": "פתח פריט עבודה",
+      "mark_as_duplicate": "סמן ככפילות",
+      "move": "העבר את {value} לפריטי העבודה של הפרויקט"
+    },
+    "source": {
+      "in-app": "באפליקציה"
+    },
+    "order_by": {
+      "created_at": "נוצר בתאריך",
+      "updated_at": "עודכן בתאריך",
+      "id": "מזהה"
+    },
+    "label": "קליטה",
+    "page_label": "{workspace} - קליטה",
+    "modal": {
+      "title": "צור פריט עבודה בקליטה"
+    },
+    "tabs": {
+      "open": "פתוח",
+      "closed": "סגור"
+    },
+    "empty_state": {
+      "sidebar_open_tab": {
+        "title": "אין פריטי עבודה פתוחים",
+        "description": "כאן תמצא פריטי עבודה פתוחים. צור פריט עבודה חדש."
+      },
+      "sidebar_closed_tab": {
+        "title": "אין פריטי עבודה סגורים",
+        "description": "כל פריטי העבודה, בין שאושרו ובין שנדחו, מופיעים כאן."
+      },
+      "sidebar_filter": {
+        "title": "אין פריטי עבודה תואמים",
+        "description": "אף פריט עבודה לא תואם את הסינון שהופעל בקליטה. צור פריט עבודה חדש."
+      },
+      "detail": {
+        "title": "בחר פריט עבודה כדי לצפות בפרטים שלו."
+      }
+    }
+  }
+}

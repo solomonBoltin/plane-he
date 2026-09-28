@@ -1,0 +1,192 @@
+{
+  "power_k": {
+    "actions_commands": {
+      "bulk_delete_work_items": "מחיקה מרובה של פריטי עבודה"
+    },
+    "contextual_actions": {
+      "work_item": {
+        "title": "פעולות על פריט עבודה",
+        "indicator": "פריט עבודה",
+        "change_state": "שינוי מצב",
+        "change_priority": "שינוי עדיפות",
+        "change_assignees": "הקצאה ל",
+        "assign_to_me": "הקצה לי",
+        "unassign_from_me": "הסר הקצאה ממני",
+        "change_estimate": "שינוי אומדן",
+        "add_to_cycle": "הוספה למחזור",
+        "add_to_modules": "הוספה למודולים",
+        "add_labels": "הוספת תגיות",
+        "subscribe": "הרשמה להתראות",
+        "unsubscribe": "ביטול הרשמה להתראות",
+        "delete": "מחק",
+        "copy_id": "העתק מזהה",
+        "copy_id_toast_success": "מזהה פריט העבודה הועתק ללוח.",
+        "copy_id_toast_error": "אירעה שגיאה בהעתקת מזהה פריט העבודה ללוח.",
+        "copy_title": "העתק כותרת",
+        "copy_title_toast_success": "כותרת פריט העבודה הועתקה ללוח.",
+        "copy_title_toast_error": "אירעה שגיאה בהעתקת כותרת פריט העבודה ללוח.",
+        "copy_url": "העתק כתובת URL",
+        "copy_url_toast_success": "כתובת ה-URL של פריט העבודה הועתקה ללוח.",
+        "copy_url_toast_error": "אירעה שגיאה בהעתקת כתובת ה-URL של פריט העבודה ללוח."
+      },
+      "cycle": {
+        "title": "פעולות על מחזור",
+        "indicator": "מחזור",
+        "add_to_favorites": "הוסף למועדפים",
+        "remove_from_favorites": "הסר מהמועדפים",
+        "copy_url": "העתק כתובת URL",
+        "copy_url_toast_success": "כתובת ה-URL של המחזור הועתקה ללוח.",
+        "copy_url_toast_error": "אירעה שגיאה בהעתקת כתובת ה-URL של המחזור ללוח."
+      },
+      "module": {
+        "title": "פעולות על מודול",
+        "indicator": "מודול",
+        "add_remove_members": "הוספה/הסרה של חברים",
+        "change_status": "שינוי סטטוס",
+        "add_to_favorites": "הוסף למועדפים",
+        "remove_from_favorites": "הסר מהמועדפים",
+        "copy_url": "העתק כתובת URL",
+        "copy_url_toast_success": "כתובת ה-URL של המודול הועתקה ללוח.",
+        "copy_url_toast_error": "אירעה שגיאה בהעתקת כתובת ה-URL של המודול ללוח."
+      },
+      "page": {
+        "title": "פעולות על עמוד",
+        "indicator": "עמוד",
+        "lock": "נעל",
+        "unlock": "בטל נעילה",
+        "make_private": "הפוך לפרטי",
+        "make_public": "הפוך לציבורי",
+        "archive": "העבר לארכיון",
+        "restore": "שחזר",
+        "add_to_favorites": "הוסף למועדפים",
+        "remove_from_favorites": "הסר מהמועדפים",
+        "copy_url": "העתק כתובת URL",
+        "copy_url_toast_success": "כתובת ה-URL של העמוד הועתקה ללוח.",
+        "copy_url_toast_error": "אירעה שגיאה בהעתקת כתובת ה-URL של העמוד ללוח."
+      }
+    },
+    "creation_actions": {
+      "create_work_item": "פריט עבודה חדש",
+      "create_page": "עמוד חדש",
+      "create_view": "תצוגה חדשה",
+      "create_cycle": "מחזור חדש",
+      "create_module": "מודול חדש",
+      "create_project": "פרויקט חדש",
+      "create_workspace": "מרחב עבודה חדש",
+      "create_project_automation": "אוטומציה חדשה"
+    },
+    "navigation_actions": {
+      "open_workspace": "פתח מרחב עבודה",
+      "nav_home": "עבור לדף הבית",
+      "nav_inbox": "עבור לתיבת הדואר הנכנס",
+      "nav_your_work": "עבור לעבודה שלך",
+      "nav_account_settings": "עבור להגדרות החשבון",
+      "open_project": "פתח פרויקט",
+      "nav_projects_list": "עבור לרשימת הפרויקטים",
+      "nav_all_workspace_work_items": "עבור לכל פריטי העבודה",
+      "nav_assigned_workspace_work_items": "עבור לפריטי עבודה שהוקצו לך",
+      "nav_created_workspace_work_items": "עבור לפריטי עבודה שיצרת",
+      "nav_subscribed_workspace_work_items": "עבור לפריטי עבודה שנרשמת אליהם",
+      "nav_workspace_analytics": "עבור לניתוח הנתונים של מרחב העבודה",
+      "nav_workspace_drafts": "עבור לטיוטות במרחב העבודה",
+      "nav_workspace_archives": "עבור לארכיון מרחב העבודה",
+      "open_workspace_setting": "פתח הגדרה של מרחב העבודה",
+      "nav_workspace_settings": "עבור להגדרות מרחב העבודה",
+      "nav_project_work_items": "עבור לפריטי העבודה",
+      "open_project_cycle": "פתח מחזור",
+      "nav_project_cycles": "עבור למחזורים",
+      "open_project_module": "פתח מודול",
+      "nav_project_modules": "עבור למודולים",
+      "open_project_view": "פתח תצוגת פרויקט",
+      "nav_project_views": "עבור לתצוגות הפרויקט",
+      "nav_project_pages": "עבור לעמודים",
+      "nav_project_intake": "עבור לקליטה",
+      "nav_project_archives": "עבור לארכיון הפרויקט",
+      "open_project_setting": "פתח הגדרה של הפרויקט",
+      "nav_project_settings": "עבור להגדרות הפרויקט",
+      "nav_workspace_active_cycle": "עבור לכל המחזורים הפעילים",
+      "nav_project_overview": "עבור לסקירת הפרויקט"
+    },
+    "account_actions": {
+      "sign_out": "התנתקות",
+      "workspace_invites": "הזמנות למרחב עבודה"
+    },
+    "miscellaneous_actions": {
+      "toggle_app_sidebar": "הצג/הסתר את סרגל הצד של האפליקציה",
+      "copy_current_page_url": "העתק כתובת URL של העמוד הנוכחי",
+      "copy_current_page_url_toast_success": "כתובת ה-URL של העמוד הנוכחי הועתקה ללוח.",
+      "copy_current_page_url_toast_error": "אירעה שגיאה בהעתקת כתובת ה-URL של העמוד הנוכחי ללוח.",
+      "focus_top_nav_search": "מיקוד בשדה החיפוש"
+    },
+    "preferences_actions": {
+      "update_theme": "שינוי ערכת הנושא של הממשק",
+      "update_timezone": "שינוי אזור זמן",
+      "update_start_of_week": "שינוי היום הראשון בשבוע",
+      "update_language": "שינוי שפת הממשק",
+      "toast": {
+        "theme": {
+          "success": "ערכת הנושא עודכנה בהצלחה.",
+          "error": "עדכון ערכת הנושא נכשל. נסה שוב."
+        },
+        "timezone": {
+          "success": "אזור הזמן עודכן בהצלחה.",
+          "error": "עדכון אזור הזמן נכשל. נסה שוב."
+        },
+        "generic": {
+          "success": "ההעדפות עודכנו בהצלחה.",
+          "error": "עדכון ההעדפות נכשל. נסה שוב."
+        }
+      }
+    },
+    "help_actions": {
+      "open_keyboard_shortcuts": "פתח קיצורי מקלדת",
+      "open_plane_documentation": "פתח את התיעוד של Plane",
+      "join_forum": "הצטרף לפורום שלנו",
+      "report_bug": "דווח על באג",
+      "chat_with_us": "שוחח איתנו"
+    },
+    "page_placeholders": {
+      "default": "הקלד פקודה או חפש",
+      "open_workspace": "פתח מרחב עבודה",
+      "open_project": "פתח פרויקט",
+      "open_workspace_setting": "פתח הגדרה של מרחב העבודה",
+      "open_project_cycle": "פתח מחזור",
+      "open_project_module": "פתח מודול",
+      "open_project_view": "פתח תצוגת פרויקט",
+      "open_project_setting": "פתח הגדרה של הפרויקט",
+      "update_work_item_state": "שינוי מצב",
+      "update_work_item_priority": "שינוי עדיפות",
+      "update_work_item_assignee": "הקצאה ל",
+      "update_work_item_estimate": "שינוי אומדן",
+      "update_work_item_cycle": "הוספה למחזור",
+      "update_work_item_module": "הוספה למודולים",
+      "update_work_item_labels": "הוספת תגיות",
+      "update_module_member": "שינוי חברים",
+      "update_module_status": "שינוי סטטוס",
+      "update_theme": "שינוי ערכת נושא",
+      "update_timezone": "שינוי אזור זמן",
+      "update_start_of_week": "שינוי היום הראשון בשבוע",
+      "update_language": "שינוי שפה"
+    },
+    "search_menu": {
+      "no_results": "לא נמצאו תוצאות",
+      "clear_search": "נקה חיפוש",
+      "go_to_advanced_search": "עבור לחיפוש מתקדם"
+    },
+    "footer": {
+      "workspace_level": "רמת מרחב העבודה"
+    },
+    "group_titles": {
+      "actions": "פעולות",
+      "contextual": "לפי הקשר",
+      "navigation": "ניווט",
+      "create": "יצירה",
+      "general": "כללי",
+      "settings": "הגדרות",
+      "account": "חשבון",
+      "miscellaneous": "שונות",
+      "preferences": "העדפות",
+      "help": "עזרה"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "command_k": {
+    "empty_state": {
+      "search": {
+        "title": "לא נמצאו תוצאות"
+      }
+    }
+  },
+  "sidebar": {
+    "stickies": "דביקים",
+    "your_work": "העבודה שלך",
+    "projects": "פרויקטים",
+    "pages": "דפים",
+    "new_work_item": "פריט עבודה חדש",
+    "home": "בית",
+    "inbox": "תיבת דואר נכנס",
+    "workspace": "סביבת עבודה",
+    "views": "תצוגות",
+    "analytics": "אנליטיקה",
+    "work_items": "פריטי עבודה",
+    "cycles": "מחזורים",
+    "modules": "מודולים",
+    "intake": "קליטה",
+    "drafts": "טיוטות",
+    "favorites": "מועדפים",
+    "pro": "Pro",
+    "upgrade": "שדרג",
+    "pi_chat": "Plane AI",
+    "epics": "אפיקים",
+    "upgrade_plan": "שדרג תוכנית",
+    "plane_pro": "Plane Pro",
+    "business": "Business"
+  }
+}

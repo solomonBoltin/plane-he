@@ -1,0 +1,115 @@
+# Build the Hebrew Plane frontend and publish it where the office can fetch it anonymously.
+#
+# WHY THIS RUNS HERE AND NOT ON THE OFFICE MACHINE: `apps/web/Dockerfile.web` runs `turbo prune`
+# over the whole monorepo, then a pnpm install and a Vite build of the entire web app. The office's
+# engine is a 5 GiB Lima guest that is already at its ceiling — CI is where the room is.
+#
+# WHY arm64: the office runs on Apple Silicon (the Lima guest is aarch64). Building linux/arm64
+# with QEMU on an amd64 runner takes hours; GitHub's native arm64 runner takes minutes. Adding
+# amd64 later is one matrix entry plus a `docker buildx imagetools create` merge.
+#
+# TWO ARTIFACTS, on purpose:
+#   1. a RELEASE ASSET tarball of the built SPA — public, anonymous, no registry login. This is what
+#      `apps/project-pln/Dockerfile` consumes, so a private GHCR package can never break a deploy.
+#   2. the image on GHCR — the same bytes, for anyone who prefers to pull an image. It is pushed
+#      with the workflow token, so it starts PRIVATE; the last step tries to flip it public and
+#      says so loudly if it cannot (that needs one click in the package settings).
+
+name: hebrew-frontend
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "locales/**"
+      - "overrides/**"
+      - "tools/**"
+      - "VERSION"
+      - ".github/workflows/build.yml"
+
+permissions:
+  contents: write # create the release the office downloads
+  packages: write # push the image
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04-arm
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Read the upstream pin
+        id: pin
+        run: echo "tag=$(cat VERSION)" >> "$GITHUB_OUTPUT"
+
+      - name: Clone upstream at the pin
+        run: |
+          git clone --depth 1 --branch "${{ steps.pin.outputs.tag }}" \
+            https://github.com/makeplane/plane.git upstream
+
+      - name: Apply the Hebrew patch
+        run: python3 tools/apply.py upstream
+
+      - name: Hebrew locale must match upstream English key-for-key
+        run: python3 tools/check-parity.py upstream/packages/i18n/src/locales/en locales/he
+
+      - name: Build the frontend image
+        run: |
+          docker build \
+            --file upstream/apps/web/Dockerfile.web \
+            --tag "plane-frontend-he:${{ steps.pin.outputs.tag }}" \
+            upstream
+
+      - name: Extract the built SPA, set the document to Hebrew, and checksum it
+        id: spa
+        run: |
+          cid=$(docker create "plane-frontend-he:${{ steps.pin.outputs.tag }}")
+          docker cp "$cid:/usr/share/caddy/html" web
+          docker rm "$cid"
+          # The document element is the one thing the runtime patch cannot fix BEFORE the first
+          # paint — index.html is served as-is and the bundle runs after. Setting lang/dir here
+          # removes the left-to-right flash on every load. The runtime patch still owns it after
+          # that, so a user who switches back to English gets LTR immediately.
+          python3 - <<'PY'
+          import pathlib, sys
+          p = pathlib.Path("web/index.html")
+          html = p.read_text(encoding="utf-8")
+          if '<html lang="en"' not in html:
+              sys.exit(f"index.html does not carry the expected <html lang=\"en\"> — upstream changed the shell; refusing to ship a half-patched document")
+          p.write_text(html.replace('<html lang="en"', '<html lang="he" dir="rtl"', 1), encoding="utf-8")
+          print("index.html: <html lang=\"he\" dir=\"rtl\">")
+          PY
+          asset="plane-web-he-${{ steps.pin.outputs.tag }}.tar.gz"
+          tar -czf "$asset" -C web .
+          sha=$(sha256sum "$asset" | cut -d' ' -f1)
+          echo "asset=$asset" >> "$GITHUB_OUTPUT"
+          echo "sha=$sha" >> "$GITHUB_OUTPUT"
+          echo "sha256: $sha" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Publish the image to GHCR
+        run: |
+          echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
+          image="ghcr.io/${{ github.repository_owner }}/plane-frontend:${{ steps.pin.outputs.tag }}-he"
+          docker tag "plane-frontend-he:${{ steps.pin.outputs.tag }}" "$image"
+          docker push "$image"
+
+      - name: Publish the SPA as a release asset
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: he-${{ steps.pin.outputs.tag }}
+          name: Hebrew frontend for Plane ${{ steps.pin.outputs.tag }}
+          body: |
+            Hebrew locale (`he`) + RTL support for Plane ${{ steps.pin.outputs.tag }}, built from
+            `makeplane/plane` at that tag with the patch in this repository.
+
+            The tarball is the SPA that upstream's image serves from `/usr/share/caddy/html`.
+          files: ${{ steps.spa.outputs.asset }}
+
+      - name: Try to make the GHCR package public (anonymous pulls for the office)
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api --method PATCH "/user/packages/container/plane-frontend" -f visibility=public \
+            || gh api --method PATCH "/users/${{ github.repository_owner }}/packages/container/plane-frontend" -f visibility=public \
+            || echo "::warning::could not flip the package to public — set it in the package settings (one click), or consume the release asset instead (which needs no login)."

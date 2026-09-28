@@ -1,0 +1,77 @@
+{
+  "home": {
+    "empty": {
+      "quickstart_guide": "מדריך ההתחלה המהירה שלך",
+      "not_right_now": "לא כרגע",
+      "create_project": {
+        "title": "צור פרויקט",
+        "description": "רוב הדברים מתחילים בפרויקט ב-Plane.",
+        "cta": "בוא נתחיל"
+      },
+      "invite_team": {
+        "title": "הזמן את הצוות שלך",
+        "description": "בנו, שחררו ונהלו יחד עם עמיתים לעבודה.",
+        "cta": "הכנס אותם"
+      },
+      "configure_workspace": {
+        "title": "הגדר את סביבת העבודה שלך.",
+        "description": "הפעל או כבה תכונות, או הרחק לכת מזה.",
+        "cta": "הגדר את סביבת העבודה הזו"
+      },
+      "personalize_account": {
+        "title": "התאם את Plane לטעמך.",
+        "description": "בחר תמונת פרופיל, צבעים ועוד.",
+        "cta": "התאם אישית עכשיו"
+      },
+      "widgets": {
+        "title": "שקט בלי ווידג'טים — הפעל אותם",
+        "description": "נראה שכל הווידג'טים שלך כבויים. הפעל אותם\nעכשיו כדי לשפר את החוויה שלך!",
+        "primary_button": {
+          "text": "נהל ווידג'טים"
+        }
+      }
+    },
+    "quick_links": {
+      "empty": "שמור קישורים לדברים בעבודה שתרצה שיהיו בהישג יד.",
+      "add": "הוסף קישור מהיר",
+      "title": "קישור מהיר",
+      "title_plural": "קישורים מהירים"
+    },
+    "recents": {
+      "title": "אחרונים",
+      "empty": {
+        "project": "הפרויקטים האחרונים שלך יופיעו כאן לאחר שתבקר באחד מהם.",
+        "page": "הדפים האחרונים שלך יופיעו כאן לאחר שתבקר באחד מהם.",
+        "issue": "פריטי העבודה האחרונים שלך יופיעו כאן לאחר שתבקר באחד מהם.",
+        "default": "אין לך עדיין פריטים אחרונים."
+      },
+      "filters": {
+        "all": "הכול",
+        "projects": "פרויקטים",
+        "pages": "דפים",
+        "issues": "פריטי עבודה"
+      }
+    },
+    "new_at_plane": {
+      "title": "חדש ב-Plane"
+    },
+    "quick_tutorial": {
+      "title": "מדריך מהיר"
+    },
+    "widget": {
+      "reordered_successfully": "הווידג'ט סודר מחדש בהצלחה.",
+      "reordering_failed": "אירעה שגיאה בסידור מחדש של הווידג'ט."
+    },
+    "manage_widgets": "נהל ווידג'טים",
+    "title": "בית",
+    "star_us_on_github": "תן לנו כוכב ב-GitHub",
+    "business_trial_banner": {
+      "title": "תקופת הניסיון שלך בת 14 יום בתוכנית Business פעילה!",
+      "description": "גלה את כל תכונות ה-Business. כשתמוכן, בחר להירשם כמנוי. לא תחויב אוטומטית.",
+      "trial_ends_today": "הניסיון מסתיים היום",
+      "trial_ends_in_days": "הניסיון מסתיים בעוד {days, plural, one {# יום} other {# ימים}}",
+      "start_subscription": "התחל מנוי",
+      "explore_business_features": "גלה את תכונות Business"
+    }
+  }
+}

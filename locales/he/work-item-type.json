@@ -1,0 +1,477 @@
+{
+  "work_item_types": {
+    "label": "סוגי פריטי עבודה",
+    "label_lowercase": "סוגי פריטי עבודה",
+    "settings": {
+      "description": "התאם אישית והוסף מאפיינים משלך כדי להתאים אותם לצרכים של הצוות שלך.",
+      "cant_delete_default_message": "לא ניתן למחוק סוג פריט עבודה זה מכיוון שהוא מוגדר כברירת מחדל בפרויקט זה",
+      "set_as_default": "הגדר כברירת מחדל",
+      "cant_set_default_inactive_message": "הפעל סוג זה לפני הגדרתו כברירת מחדל",
+      "set_default_confirmation": {
+        "title": "הגדר כסוג פריט עבודה ברירת מחדל",
+        "description": "הגדרת {name} כברירת מחדל תייבא אותו לכל הפרויקטים בסביבת העבודה הזו. כל פריטי העבודה החדשים ישתמשו בסוג זה כברירת מחדל.",
+        "confirm_button": "הגדר כברירת מחדל"
+      },
+      "properties": {
+        "title": "מאפיינים",
+        "description": "צור והתאם אישית מאפיינים.",
+        "tooltip": "לכל סוג פריט עבודה מגיע סט ברירת מחדל של מאפיינים כגון כותרת, תיאור, אחראי, מצב, עדיפות, תאריך התחלה, תאריך יעד, מודול, מחזור וכדומה. ניתן גם להתאים אישית ולהוסיף מאפיינים משלך כדי להתאים אותם לצרכים של הצוות שלך.",
+        "add_button": "הוסף מאפיין חדש",
+        "project": {
+          "add_button": {
+            "import_from_workspace": "ייבוא מסביבת העבודה"
+          }
+        },
+        "dropdown": {
+          "label": "סוג מאפיין",
+          "placeholder": "בחר סוג"
+        },
+        "property_type": {
+          "text": {
+            "label": "טקסט"
+          },
+          "number": {
+            "label": "מספר"
+          },
+          "dropdown": {
+            "label": "רשימה נפתחת"
+          },
+          "boolean": {
+            "label": "בוליאני"
+          },
+          "date": {
+            "label": "תאריך"
+          },
+          "member_picker": {
+            "label": "בוחר חברים"
+          },
+          "formula": {
+            "label": "נוסחה"
+          }
+        },
+        "attributes": {
+          "label": "תכונות",
+          "text": {
+            "single_line": {
+              "label": "שורה אחת"
+            },
+            "multi_line": {
+              "label": "פסקה"
+            },
+            "readonly": {
+              "label": "לקריאה בלבד",
+              "header": "נתונים לקריאה בלבד"
+            },
+            "invalid_text_format": {
+              "label": "תבנית טקסט לא תקינה"
+            }
+          },
+          "number": {
+            "default": {
+              "placeholder": "הוסף מספר"
+            }
+          },
+          "relation": {
+            "single_select": {
+              "label": "בחירה בודדת"
+            },
+            "multi_select": {
+              "label": "בחירה מרובה"
+            },
+            "no_default_value": {
+              "label": "ללא ערך ברירת מחדל"
+            }
+          },
+          "boolean": {
+            "label": "נכון | לא נכון",
+            "no_default": "ללא ערך ברירת מחדל"
+          },
+          "option": {
+            "create_update": {
+              "label": "אפשרויות",
+              "form": {
+                "placeholder": "הוסף אפשרות",
+                "errors": {
+                  "name": {
+                    "required": "יש להזין שם לאפשרות.",
+                    "integrity": "כבר קיימת אפשרות עם אותו שם."
+                  }
+                }
+              }
+            },
+            "select": {
+              "placeholder": {
+                "single": "בחר אפשרות",
+                "multi": {
+                  "default": "בחר אפשרויות",
+                  "variable": "נבחרו {count} אפשרויות"
+                }
+              }
+            }
+          }
+        },
+        "toast": {
+          "create": {
+            "success": {
+              "title": "הצלחה!",
+              "message": "המאפיין {name} נוצר בהצלחה."
+            },
+            "error": {
+              "title": "שגיאה!",
+              "message": "יצירת המאפיין נכשלה. נסה שוב!"
+            }
+          },
+          "update": {
+            "success": {
+              "title": "הצלחה!",
+              "message": "המאפיין {name} עודכן בהצלחה."
+            },
+            "error": {
+              "title": "שגיאה!",
+              "message": "עדכון המאפיין נכשל. נסה שוב!"
+            }
+          },
+          "delete": {
+            "success": {
+              "title": "הצלחה!",
+              "message": "המאפיין {name} נמחק בהצלחה."
+            },
+            "error": {
+              "title": "שגיאה!",
+              "message": "מחיקת המאפיין נכשלה. נסה שוב!"
+            }
+          },
+          "enable_disable": {
+            "loading": "{action} את המאפיין {name}",
+            "success": {
+              "title": "הצלחה!",
+              "message": "הפעולה {action} על המאפיין {name} הושלמה בהצלחה."
+            },
+            "error": {
+              "title": "שגיאה!",
+              "message": "הפעולה {action} על המאפיין נכשלה. נסה שוב!"
+            }
+          }
+        },
+        "create_update": {
+          "title": {
+            "create": "צור מאפיין מותאם אישית חדש",
+            "update": "עדכן מאפיין מותאם אישית"
+          },
+          "form": {
+            "display_name": {
+              "placeholder": "כותרת"
+            },
+            "description": {
+              "placeholder": "תיאור"
+            }
+          },
+          "errors": {
+            "name": {
+              "required": "עליך לתת שם למאפיין.",
+              "max_length": "שם המאפיין לא יעלה על 255 תווים."
+            },
+            "property_type": {
+              "required": "עליך לבחור סוג מאפיין."
+            },
+            "options": {
+              "required": "עליך להוסיף לפחות אפשרות אחת."
+            },
+            "formula": {
+              "required": "יש להזין ביטוי נוסחה.",
+              "invalid": "נוסחה לא תקינה: {error}",
+              "circular_reference": "זוהתה הפניה מעגלית. נוסחה אינה יכולה להפנות לעצמה, במישרין או בעקיפין.",
+              "invalid_reference": "הנוסחה מפנה למאפיין שאינו קיים."
+            }
+          }
+        },
+        "formula": {
+          "field_label": "שדה נוסחה",
+          "tooltip": "הזן נוסחה בתחביר '{'Field Name'}'. תומך באופרטורים +, -, *, /, &.",
+          "placeholder": "כתוב את הנוסחה",
+          "test_button": "בדוק",
+          "validating": "מאמת",
+          "validation_success": "הנוסחה תקינה! מחזירה {resultType}",
+          "validation_success_with_refs": "הנוסחה תקינה! מחזירה {resultType} ({count} שדות בהפניה)",
+          "error": {
+            "empty": "יש להזין נוסחה",
+            "missing_context": "חסר הקשר של סביבת עבודה, פרויקט או סוג פריט עבודה",
+            "validation_failed": "האימות נכשל"
+          },
+          "picker": {
+            "no_match": "לא נמצאו מאפיינים מתאימים",
+            "no_available": "אין מאפיינים זמינים"
+          }
+        },
+        "enable_disable": {
+          "label": "פעיל",
+          "tooltip": {
+            "disabled": "לחץ כדי להשבית",
+            "enabled": "לחץ כדי להפעיל"
+          }
+        },
+        "delete_confirmation": {
+          "title": "מחק מאפיין זה",
+          "description": "מחיקת מאפיינים עלולה לגרום לאובדן נתונים קיימים.",
+          "secondary_description": "להשבית את המאפיין במקום זאת?",
+          "primary_button": "{action}, מחק אותו",
+          "secondary_button": "כן, השבת אותו"
+        },
+        "mandate_confirmation": {
+          "label": "מאפיין חובה",
+          "content": "נראה שקיימת אפשרות ברירת מחדל למאפיין זה. הגדרת המאפיין כמאפיין חובה תסיר את ערך ברירת המחדל, והמשתמשים יצטרכו לבחור ערך בעצמם.",
+          "tooltip": {
+            "disabled": "לא ניתן להגדיר סוג מאפיין זה כמאפיין חובה",
+            "enabled": "בטל את הסימון כדי לסמן את השדה כאופציונלי",
+            "checked": "סמן כדי להגדיר את השדה כשדה חובה"
+          }
+        },
+        "empty_state": {
+          "title": "הוסף מאפיינים מותאמים אישית",
+          "description": "מאפיינים חדשים שתוסיף לסוג פריט עבודה זה יופיעו כאן."
+        }
+      },
+      "types": {
+        "title": "סוגים",
+        "description": "צור והתאם אישית סוגי פריטי עבודה עם מאפיינים.",
+        "sort_options": {
+          "project_count": "מספר הפרויקטים שבהם הוא משתתף"
+        },
+        "filter_options": {
+          "show_active": "הצג פעילים",
+          "show_inactive": "הצג לא פעילים"
+        },
+        "project": {
+          "add_button": {
+            "create_new": "צור חדש",
+            "import_from_workspace": "ייבוא מסביבת העבודה"
+          },
+          "banner": {
+            "with_access": "הפעל סוגי פריטי עבודה כדי לייבא סוגים מרמת סביבת העבודה",
+            "without_access": "סוגי פריטי עבודה מושבתים. פנה למנהל סביבת העבודה כדי להפעיל אותם בהגדרות סביבת העבודה."
+          }
+        }
+      },
+      "linked_properties": {
+        "title": "מאפיינים מותאמים אישית",
+        "add_button": "הוסף מאפיינים",
+        "modal": {
+          "title": "הוסף מאפיינים",
+          "empty": {
+            "title": "אין מאפיינים זמינים",
+            "description": "כל המאפיינים כבר מקושרים לסוג זה."
+          }
+        },
+        "unlink_confirmation": {
+          "title": "בטל קישור מאפיין",
+          "description": "ביטול הקישור של מאפיין זה ימחק לצמיתות את כל ערכיו בכל פריטי העבודה שמשתמשים בסוג זה. לא ניתן לבטל פעולה זו.",
+          "input_label": "הקלד",
+          "input_label_suffix": "כדי להמשיך:",
+          "confirm": "בטל קישור מאפיין",
+          "loading": "מבטל קישור"
+        }
+      },
+      "item_delete_confirmation": {
+        "title": "מחק סוג זה",
+        "description": "מחיקת סוגים עלולה לגרום לאובדן נתונים קיימים.",
+        "can_disable_warning": "להשבית את הסוג במקום זאת?",
+        "primary_button": "כן, מחק אותו",
+        "toast": {
+          "success": {
+            "title": "הצלחה!",
+            "message": "סוג פריט העבודה נמחק בהצלחה."
+          },
+          "error": {
+            "title": "שגיאה!",
+            "message": "מחיקת סוג פריט העבודה נכשלה. נסה שוב!"
+          }
+        },
+        "errors": {
+          "cannot_delete_default_work_item_type": "לא ניתן למחוק סוג פריט עבודה ברירת מחדל",
+          "cannot_delete_work_item_type_with_associated_work_items": "לא ניתן למחוק סוג פריט עבודה שמשויכים אליו פריטי עבודה"
+        }
+      }
+    },
+    "create": {
+      "title": "צור סוג פריט עבודה",
+      "button": "הוסף סוג פריט עבודה",
+      "toast": {
+        "success": {
+          "title": "הצלחה!",
+          "message": "סוג פריט העבודה נוצר בהצלחה."
+        },
+        "error": {
+          "title": "שגיאה!",
+          "message": {
+            "default": "יצירת סוג פריט העבודה נכשלה. נסה שוב!",
+            "conflict": "הסוג {name} כבר קיים. בחר שם אחר."
+          }
+        }
+      }
+    },
+    "update": {
+      "title": "עדכן סוג פריט עבודה",
+      "button": "עדכן סוג פריט עבודה",
+      "toast": {
+        "success": {
+          "title": "הצלחה!",
+          "message": "סוג פריט העבודה {name} עודכן בהצלחה."
+        },
+        "error": {
+          "title": "שגיאה!",
+          "message": {
+            "default": "עדכון סוג פריט העבודה נכשל. נסה שוב!",
+            "conflict": "הסוג {name} כבר קיים. בחר שם אחר."
+          }
+        }
+      }
+    },
+    "create_update": {
+      "form": {
+        "name": {
+          "placeholder": "תן לסוג פריט עבודה זה שם ייחודי"
+        },
+        "description": {
+          "placeholder": "תאר למה מיועד סוג פריט עבודה זה ומתי יש להשתמש בו."
+        }
+      }
+    },
+    "enable_disable": {
+      "toast": {
+        "loading": "{action} את סוג פריט העבודה {name}",
+        "success": {
+          "title": "הצלחה!",
+          "message": "הפעולה {action} על סוג פריט העבודה {name} הושלמה בהצלחה."
+        },
+        "error": {
+          "title": "שגיאה!",
+          "message": "הפעולה {action} על סוג פריט העבודה נכשלה. נסה שוב!"
+        }
+      },
+      "tooltip": "לחץ כדי {action}"
+    },
+    "change_confirmation": {
+      "title": "לשנות את סוג פריט העבודה?",
+      "description": "שינוי סוג פריט העבודה עלול לגרום לאובדן ערכים של מאפיינים מותאמים אישית הייחודיים לסוג הנוכחי. לא ניתן לבטל פעולה זו.",
+      "button": {
+        "loading": "משנה",
+        "default": "שנה סוג"
+      }
+    },
+    "empty_state": {
+      "enable": {
+        "title": "הפעל סוגי פריטי עבודה",
+        "description": "התאם את פריטי העבודה לעבודה שלך עם סוגי פריטי עבודה. התאם אישית עם אייקונים, רקעים ומאפיינים, והגדר אותם לפרויקט זה.",
+        "primary_button": {
+          "text": "הפעל"
+        },
+        "confirmation": {
+          "title": "לאחר ההפעלה לא ניתן להשבית סוגי פריטי עבודה.",
+          "description": "סוג פריט העבודה של Plane יהפוך לסוג ברירת המחדל בפרויקט זה ויופיע עם האייקון והרקע שלו בפרויקט.",
+          "button": {
+            "default": "הפעל",
+            "loading": "מגדיר"
+          }
+        }
+      },
+      "get_pro": {
+        "title": "שדרג ל-Pro כדי להפעיל סוגי פריטי עבודה.",
+        "description": "התאם את פריטי העבודה לעבודה שלך עם סוגי פריטי עבודה. התאם אישית עם אייקונים, רקעים ומאפיינים, והגדר אותם לפרויקט זה.",
+        "primary_button": {
+          "text": "שדרג ל-Pro"
+        }
+      },
+      "upgrade": {
+        "title": "שדרג כדי להפעיל סוגי פריטי עבודה.",
+        "description": "התאם את פריטי העבודה לעבודה שלך עם סוגי פריטי עבודה. התאם אישית עם אייקונים, רקעים ומאפיינים, והגדר אותם לפרויקט זה.",
+        "primary_button": {
+          "text": "שדרג"
+        }
+      }
+    }
+  },
+  "work_item_type_hierarchy": {
+    "settings": {
+      "title": "היררכיה",
+      "tab_label": "היררכיה",
+      "description": "הגדר רמות היררכיה כדי לארגן את העבודה שלך. כל רמה מגדירה קשר הורה עם הפריט שמעליה ישירות וקשר בן עם הפריט שמתחתיה ישירות. ",
+      "sidebar_label": "היררכיה",
+      "enable_control": {
+        "title": "הפעל היררכיה",
+        "description": "צור קשרי הורה-בן בין סוגי פריטי עבודה שונים.",
+        "tooltip": "לא ניתן להשבית היררכיה לאחר שהופעלה."
+      },
+      "workspace_work_item_types_disabled_banner": {
+        "content": "הגדר תחילה סוגי פריטי עבודה כדי ליצור היררכיה חדשה.",
+        "cta": "הגדרות סוגי פריטי עבודה"
+      }
+    },
+    "levels": {
+      "max_level_placeholder": "גרור ושחרר סוג כדי להוסיף רמת היררכיה חדשה",
+      "empty_level_placeholder": "גרור ושחרר סוג פריט עבודה לרמה {level}",
+      "drag_tooltip": "גרור כדי לשנות רמה",
+      "quick_actions": {
+        "set_as_default": {
+          "label": "הגדר כברירת מחדל",
+          "toast": {
+            "loading": "מגדיר כברירת מחדל...",
+            "success": {
+              "title": "הצלחה!",
+              "message": "רמת ההיררכיה {level} הוגדרה כברירת מחדל בהצלחה."
+            },
+            "error": {
+              "title": "שגיאה!",
+              "message": "הגדרת רמת ההיררכיה {level} כברירת מחדל נכשלה. נסה שוב."
+            }
+          }
+        }
+      },
+      "update_level_toast": {
+        "loading": "מעביר את {workItemTypeName} לרמה {level}...",
+        "success": {
+          "title": "הצלחה!",
+          "message": "{workItemTypeName} הועבר לרמה {level} בהצלחה."
+        }
+      }
+    },
+    "break_hierarchy_modal": {
+      "title": "שגיאת אימות!",
+      "content": {
+        "intro": "לסוג פריט העבודה {workItemTypeName} יש:",
+        "parent_items": "{count, plural, one {פריט עבודה הורה} other {פריטי עבודה הורה}}",
+        "child_items": "{count, plural, one {תת-פריט עבודה} other {תתי-פריטי עבודה}}",
+        "parent_line_suffix_when_also_children": ", וכן ",
+        "footer": "שינוי זה יסיר את קשרי ההורה והבן מפריטי עבודה קיימים מסוג {workItemTypeName}."
+      },
+      "confirm_input": {
+        "label": "הקלד \"Confirm\" כדי להמשיך.",
+        "placeholder": "Confirm"
+      },
+      "error_toast": {
+        "title": "שגיאה!",
+        "message": "פירוק ההיררכיה נכשל. נסה שוב."
+      },
+      "confirm_button": {
+        "loading": "מחיל",
+        "default": "החל ובטל קישור"
+      }
+    },
+    "work_item_modal": {
+      "invalid_work_item_type_create_toast": {
+        "title": "שגיאה!",
+        "message": "לא ניתן להשתמש בסוג פריט העבודה שנבחר ליצירת פריט עבודה חדש, מכיוון שהוא מפר את כללי ההיררכיה."
+      },
+      "invalid_work_item_type_update_toast": {
+        "title": "שגיאה!",
+        "message": "לא ניתן לעדכן את סוג פריט העבודה מכיוון שהוא מפר את כללי ההיררכיה."
+      }
+    },
+    "work_item_type_modal": {
+      "level": "רמת היררכיה",
+      "invalid_level_toast": {
+        "title": "שגיאה!",
+        "message": "לא ניתן לעדכן את סוג פריט העבודה מכיוון שהוא מפר את כללי ההיררכיה."
+      }
+    }
+  }
+}

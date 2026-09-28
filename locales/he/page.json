@@ -1,0 +1,115 @@
+{
+  "page_navigation_pane": {
+    "tabs": {
+      "outline": {
+        "label": "מתאר",
+        "empty_state": {
+          "title": "חסרות כותרות",
+          "description": "בוא נוסיף כמה כותרות לדף הזה כדי לראות אותן כאן."
+        }
+      },
+      "info": {
+        "label": "מידע",
+        "document_info": {
+          "words": "מילים",
+          "characters": "תווים",
+          "paragraphs": "פסקאות",
+          "read_time": "זמן קריאה"
+        },
+        "actors_info": {
+          "edited_by": "נערך על ידי",
+          "created_by": "נוצר על ידי"
+        },
+        "version_history": {
+          "label": "היסטוריית גרסאות",
+          "current_version": "גרסה נוכחית",
+          "highlight_changes": "הדגש שינויים"
+        }
+      },
+      "assets": {
+        "label": "נכסים",
+        "download_button": "הורד",
+        "empty_state": {
+          "title": "חסרות תמונות",
+          "description": "הוסף תמונות כדי לראות אותן כאן."
+        }
+      },
+      "comments": {
+        "label": "תגובות",
+        "empty_state": {
+          "title": "אין תגובות",
+          "description": "הוסף תגובות כדי לראות אותן כאן."
+        }
+      }
+    },
+    "toasts": {
+      "errors": {
+        "wrong_name": "שם הדביק לא יכול להיות ארוך מ-100 תווים.",
+        "already_exists": "כבר קיים דביק ללא תיאור"
+      },
+      "created": {
+        "title": "הדביק נוצר",
+        "message": "הדביק נוצר בהצלחה"
+      },
+      "not_created": {
+        "title": "הדביק לא נוצר",
+        "message": "לא ניתן היה ליצור את הדביק"
+      },
+      "updated": {
+        "title": "הדביק עודכן",
+        "message": "הדביק עודכן בהצלחה"
+      },
+      "not_updated": {
+        "title": "הדביק לא עודכן",
+        "message": "לא ניתן היה לעדכן את הדביק"
+      },
+      "removed": {
+        "title": "הדביק הוסר",
+        "message": "הדביק הוסר בהצלחה"
+      },
+      "not_removed": {
+        "title": "הדביק לא הוסר",
+        "message": "לא ניתן היה להסיר את הדביק"
+      }
+    },
+    "open_button": "פתח חלונית ניווט",
+    "close_button": "סגור חלונית ניווט",
+    "outline_floating_button": "פתח מתאר"
+  },
+  "page_actions": {
+    "move_page": {
+      "submit_button": {
+        "default": "העבר",
+        "loading": "מעביר"
+      },
+      "cannot_move_to_teamspace": "לא ניתן להעביר דפים פרטיים ומשותפים למרחב צוות.",
+      "placeholders": {
+        "workspace_to_all": "חפש פרויקטים ומרחבי צוות",
+        "workspace_to_project": "חפש פרויקטים",
+        "project_to_all": "חפש פרויקטים ומרחבי צוות",
+        "project_to_project": "חפש פרויקטים",
+        "project_to_all_with_wiki": "חפש אוספי ויקי, פרויקטים ומרחבי צוות",
+        "project_to_project_with_wiki": "חפש אוספי ויקי ופרויקטים"
+      },
+      "toasts": {
+        "success": {
+          "title": "הצלחה!",
+          "message": "הדף הועבר בהצלחה."
+        },
+        "error": {
+          "title": "שגיאה!",
+          "message": "לא ניתן היה להעביר את הדף. נסה שוב מאוחר יותר."
+        },
+        "collection_error": {
+          "title": "הועבר לויקי",
+          "message": "הדף הועבר לויקי, אך לא ניתן היה להוסיף אותו לאוסף שנבחר. הוא נשאר ב״כללי״."
+        }
+      }
+    },
+    "remove_from_collection": {
+      "label": "הסר מהאוסף",
+      "success_message": "הדף הוסר מהאוסף.",
+      "error_message": "לא ניתן היה להסיר את הדף מהאוסף. נסה שוב."
+    }
+  }
+}

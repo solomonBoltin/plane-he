@@ -1,0 +1,333 @@
+{
+  "templates": {
+    "settings": {
+      "title": "תבניות",
+      "description": "חסוך 80% מהזמן ביצירת פרויקטים, פריטי עבודה ועמודים כשאתה משתמש בתבניות.",
+      "new_project_template": "תבנית פרויקט חדשה",
+      "new_work_item_template": "תבנית פריט עבודה חדשה",
+      "new_page_template": "תבנית עמוד חדשה",
+      "options": {
+        "project": {
+          "label": "תבניות פרויקט"
+        },
+        "work_item": {
+          "label": "תבניות פריטי עבודה"
+        },
+        "page": {
+          "label": "תבניות עמוד"
+        }
+      },
+      "create_template": {
+        "label": "צור תבנית",
+        "no_permission": {
+          "project": "פנה למנהל הפרויקט כדי ליצור תבניות",
+          "workspace": "פנה למנהל מרחב העבודה כדי ליצור תבניות"
+        }
+      },
+      "use_template": {
+        "button": {
+          "default": "השתמש בתבנית",
+          "loading": "מחיל"
+        }
+      },
+      "template_source": {
+        "workspace": {
+          "info": "נגזר ממרחב העבודה"
+        },
+        "project": {
+          "info": "נגזר מהפרויקט"
+        }
+      },
+      "form": {
+        "project": {
+          "template": {
+            "name": {
+              "placeholder": "תן שם לתבנית הפרויקט.",
+              "validation": {
+                "required": "יש להזין שם לתבנית",
+                "maxLength": "שם התבנית צריך להכיל פחות מ-255 תווים"
+              }
+            },
+            "description": {
+              "placeholder": "תאר מתי ואיך להשתמש בתבנית הזו."
+            }
+          },
+          "name": {
+            "placeholder": "תן שם לפרויקט.",
+            "validation": {
+              "required": "יש להזין כותרת לפרויקט",
+              "maxLength": "כותרת הפרויקט צריכה להכיל פחות מ-255 תווים"
+            }
+          },
+          "description": {
+            "placeholder": "תאר את המטרה והיעדים של הפרויקט הזה."
+          },
+          "button": {
+            "create": "צור תבנית פרויקט",
+            "update": "עדכן תבנית פרויקט"
+          }
+        },
+        "work_item": {
+          "template": {
+            "name": {
+              "placeholder": "תן שם לתבנית פריט העבודה.",
+              "validation": {
+                "required": "יש להזין שם לתבנית",
+                "maxLength": "שם התבנית צריך להכיל פחות מ-255 תווים"
+              }
+            },
+            "description": {
+              "placeholder": "תאר מתי ואיך להשתמש בתבנית הזו."
+            }
+          },
+          "name": {
+            "placeholder": "תן כותרת לפריט העבודה הזה.",
+            "validation": {
+              "required": "יש להזין כותרת לפריט העבודה",
+              "maxLength": "כותרת פריט העבודה צריכה להכיל פחות מ-255 תווים"
+            }
+          },
+          "description": {
+            "placeholder": "תאר את פריט העבודה כך שיהיה ברור מה תשלים כשתסיים אותו."
+          },
+          "button": {
+            "create": "צור תבנית פריט עבודה",
+            "update": "עדכן תבנית פריט עבודה"
+          }
+        },
+        "page": {
+          "template": {
+            "name": {
+              "placeholder": "תן שם לתבנית העמוד.",
+              "validation": {
+                "required": "יש להזין שם לתבנית",
+                "maxLength": "שם התבנית צריך להכיל פחות מ-255 תווים"
+              }
+            },
+            "description": {
+              "placeholder": "תאר מתי ואיך להשתמש בתבנית הזו."
+            }
+          },
+          "name": {
+            "placeholder": "עמוד ללא שם",
+            "validation": {
+              "maxLength": "שם העמוד צריך להכיל פחות מ-255 תווים"
+            }
+          },
+          "button": {
+            "create": "צור תבנית עמוד",
+            "update": "עדכן תבנית עמוד"
+          }
+        },
+        "publish": {
+          "action": "{isPublished, select, true {הגדרות פרסום} other {פרסום ב-Marketplace}}",
+          "unpublish_action": "בטל פרסום ב-Marketplace",
+          "title": "הפוך את התבנית שלך לקלה לגילוי ולזיהוי.",
+          "name": {
+            "label": "שם התבנית",
+            "placeholder": "תן שם לתבנית",
+            "validation": {
+              "required": "יש להזין שם לתבנית",
+              "maxLength": "שם התבנית צריך להכיל פחות מ-255 תווים"
+            }
+          },
+          "short_description": {
+            "label": "תיאור קצר",
+            "placeholder": "התבנית הזו מצוינת למנהלי פרויקטים שמנהלים כמה פרויקטים במקביל.",
+            "validation": {
+              "required": "יש להזין תיאור קצר"
+            }
+          },
+          "description": {
+            "label": "תיאור",
+            "placeholder": "שפר את הפרודוקטיביות וייעל את התקשורת עם אינטגרציית Speech-To-Text שלנו.\n• תמלול בזמן אמת: המר מילים מדוברות לטקסט מדויק באופן מיידי.\n• יצירת משימות ותגובות: הוסף משימות, תיאורים ותגובות באמצעות פקודות קוליות.",
+            "validation": {
+              "required": "יש להזין תיאור"
+            }
+          },
+          "category": {
+            "label": "קטגוריה",
+            "placeholder": "בחר היכן זה מתאים ביותר. אפשר לבחור יותר מאחת.",
+            "validation": {
+              "required": "יש לבחור לפחות קטגוריה אחת"
+            }
+          },
+          "keywords": {
+            "label": "מילות מפתח",
+            "placeholder": "השתמש במונחים שלדעתך המשתמשים יחפשו כשהם מחפשים את התבנית הזו.",
+            "helperText": "הזן מילות מפתח מופרדות בפסיק, שיעזרו לאנשים למצוא את התבנית הזו בחיפוש.",
+            "validation": {
+              "required": "יש להזין לפחות מילת מפתח אחת"
+            }
+          },
+          "website": {
+            "label": "כתובת האתר",
+            "placeholder": "https://plane.so",
+            "validation": {
+              "invalid": "כתובת URL לא תקינה",
+              "maxLength": "כתובת ה-URL צריכה להכיל פחות מ-800 תווים"
+            }
+          },
+          "company_name": {
+            "label": "שם החברה",
+            "placeholder": "Plane",
+            "validation": {
+              "required": "יש להזין שם חברה",
+              "maxLength": "שם החברה צריך להכיל פחות מ-255 תווים"
+            }
+          },
+          "contact_email": {
+            "label": "דוא\"ל ליצירת קשר",
+            "placeholder": "help@plane.so",
+            "validation": {
+              "invalid": "כתובת דוא\"ל לא תקינה",
+              "maxLength": "דוא\"ל ליצירת קשר צריך להכיל פחות מ-255 תווים"
+            }
+          },
+          "privacy_policy_url": {
+            "label": "קישור למדיניות הפרטיות שלך",
+            "placeholder": "https://planes.so/privacy-policy",
+            "validation": {
+              "invalid": "כתובת URL לא תקינה",
+              "maxLength": "כתובת ה-URL צריכה להכיל פחות מ-800 תווים"
+            }
+          },
+          "terms_of_service_url": {
+            "label": "קישור לתנאי השימוש שלך",
+            "placeholder": "https://planes.so/terms-of-use",
+            "validation": {
+              "invalid": "כתובת URL לא תקינה",
+              "maxLength": "כתובת ה-URL צריכה להכיל פחות מ-800 תווים"
+            }
+          },
+          "cover_image": {
+            "label": "הוסף תמונת כיסוי שתוצג ב-Marketplace",
+            "upload_title": "העלה תמונת כיסוי",
+            "upload_placeholder": "לחץ להעלאה או גרור ושחרר כדי להעלות תמונת כיסוי",
+            "drop_here": "שחרר כאן",
+            "click_to_upload": "לחץ להעלאה",
+            "invalid_file_or_exceeds_size_limit": "קובץ לא תקין או חורג ממגבלת הגודל. נסה שוב.",
+            "upload_and_save": "העלה ושמור",
+            "uploading": "מעלה",
+            "remove": "הסר",
+            "removing": "מסיר",
+            "validation": {
+              "required": "יש להוסיף תמונת כיסוי"
+            }
+          },
+          "attach_screenshots": {
+            "label": "צרף תמונות שלדעתך יעזרו למי שצופה בתבנית הזו.",
+            "validation": {
+              "required": "יש להוסיף לפחות צילום מסך אחד"
+            }
+          }
+        }
+      }
+    },
+    "empty_state": {
+      "upgrade": {
+        "title": "תבניות",
+        "description": "עם תבניות לפרויקטים, לפריטי עבודה ולעמודים ב-Plane, אין צורך ליצור פרויקט מאפס או להגדיר מאפיינים של פריטי עבודה ידנית.",
+        "sub_description": "קבל בחזרה 80% מזמן הניהול שלך כשאתה משתמש בתבניות."
+      },
+      "no_templates": {
+        "button": "צור את התבנית הראשונה שלך"
+      },
+      "no_labels": {
+        "description": "אין עדיין תגיות. צור תגיות כדי לעזור לארגן ולסנן פריטי עבודה בפרויקט שלך."
+      },
+      "no_modules": {
+        "description": "אין עדיין מודולים. ארגן את העבודה לתת-פרויקטים עם מובילים ואחראים ייעודיים."
+      },
+      "no_work_items": {
+        "description": "אין עדיין פריטי עבודה. הוסף אחד כדי לארגן את העבודה שלך בצורה טובה יותר."
+      },
+      "no_sub_work_items": {
+        "description": "אין עדיין תת-פריטי עבודה. הוסף אחד כדי לארגן את העבודה שלך בצורה טובה יותר."
+      },
+      "page": {
+        "no_templates": {
+          "title": "אין תבניות שיש לך גישה אליהן.",
+          "description": "צור תבנית"
+        },
+        "no_results": {
+          "title": "זה לא תאם לאף תבנית.",
+          "description": "נסה לחפש במונחים אחרים."
+        }
+      }
+    },
+    "toasts": {
+      "create": {
+        "success": {
+          "title": "התבנית נוצרה",
+          "message": "{templateName}, תבנית {templateType}, זמינה כעת במרחב העבודה שלך."
+        },
+        "error": {
+          "title": "לא הצלחנו ליצור את התבנית הזו הפעם.",
+          "message": "נסה לשמור את הפרטים שוב או להעתיק אותם לתבנית חדשה, רצוי בלשונית אחרת."
+        }
+      },
+      "update": {
+        "success": {
+          "title": "התבנית שונתה",
+          "message": "{templateName}, תבנית {templateType}, שונתה."
+        },
+        "error": {
+          "title": "לא הצלחנו לשמור את השינויים בתבנית הזו.",
+          "message": "נסה לשמור את הפרטים שוב או לחזור לתבנית הזו מאוחר יותר. אם הבעיה נמשכת, פנה אלינו."
+        }
+      },
+      "delete": {
+        "success": {
+          "title": "התבנית נמחקה",
+          "message": "{templateName}, תבנית {templateType}, נמחקה כעת ממרחב העבודה שלך."
+        },
+        "error": {
+          "title": "לא הצלחנו למחוק את התבנית הזו.",
+          "message": "נסה למחוק אותה שוב או לחזור אליה מאוחר יותר. אם עדיין לא ניתן למחוק אותה, פנה אלינו."
+        }
+      },
+      "unpublish": {
+        "success": {
+          "title": "פרסום התבנית בוטל",
+          "message": "הפרסום של {templateName}, תבנית {templateType}, בוטל כעת."
+        },
+        "error": {
+          "title": "לא הצלחנו לבטל את הפרסום של התבנית הזו.",
+          "message": "נסה לבטל את הפרסום שוב או לחזור אליה מאוחר יותר. אם עדיין לא ניתן לבטל אותו, פנה אלינו."
+        }
+      }
+    },
+    "delete_confirmation": {
+      "title": "מחיקת תבנית",
+      "description": {
+        "prefix": "האם אתה בטוח שברצונך למחוק את template-",
+        "suffix": "? כל הנתונים הקשורים לתבנית יימחקו לצמיתות. לא ניתן לבטל פעולה זו."
+      }
+    },
+    "unpublish_confirmation": {
+      "title": "ביטול פרסום של תבנית",
+      "description": {
+        "prefix": "האם אתה בטוח שברצונך לבטל את הפרסום של template-",
+        "suffix": "? התבנית הזו לא תהיה זמינה יותר למשתמשים ב-Marketplace."
+      }
+    },
+    "dropdown": {
+      "add": {
+        "work_item": "הוסף תבנית חדשה",
+        "project": "הוסף תבנית חדשה"
+      },
+      "label": {
+        "project": "בחר תבנית פרויקט",
+        "page": "בחר מתוך תבנית"
+      },
+      "tooltip": {
+        "work_item": "בחר תבנית פריט עבודה"
+      },
+      "no_results": {
+        "work_item": "לא נמצאו תבניות.",
+        "project": "לא נמצאו תבניות."
+      }
+    }
+  }
+}

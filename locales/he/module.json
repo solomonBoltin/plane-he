@@ -1,0 +1,7 @@
+{
+  "module": {
+    "label": "{count, plural, one {מודול} other {מודולים}}",
+    "no_module": "ללא מודול",
+    "select": "הוסף מודולים"
+  }
+}
