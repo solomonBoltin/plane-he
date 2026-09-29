@@ -58,7 +58,7 @@ BRANCH = re.compile(r"(\w+)\s*\{")
 #     un-fixed version rendered "טוב בוקר".
 ALLOWED_RESTRUCTURES: dict[tuple[str, str], str] = {
     ("workspace.json", "workspace.members_import.summary.message.success"): "English plural suffix supplied by code; Hebrew uses ICU instead",
-    ("common.json", "good"): "greeting is composed as '{good} {time}'; Hebrew puts the time first, so the phrase lives in the time key",
+    ("common.json", "good"): "greeting is composed as '{good} {time}'; Hebrew puts the time first, so the phrase lives in the time key and this one is a zero-width space — NOT empty, because i18next is configured with returnEmptyString:false, which turns an empty value back into the English 'Good' (measured: the greeting rendered 'Good בוקר טוב')",
 }
 
 
