@@ -22,7 +22,9 @@ unmerged, written against the obsolete `.ts` locale layout).
 
 ```
 VERSION                      the upstream tag this patch is derived against (one line)
-overrides/                   whole replacement files for the upstream sources we change
+overrides/                   whole REPLACEMENT files — each must exist upstream, and that check
+                             is the guard that catches upstream moving a line
+additions/                   files upstream does not have (the bundled Hebrew font)
 locales/he/*.json            28 namespace files — the translation itself
 tools/apply.py               lay the patch over a clean upstream clone (fails loudly on drift)
 tools/check-parity.py        key + placeholder + ICU parity against upstream English
