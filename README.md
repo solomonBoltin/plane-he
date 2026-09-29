@@ -39,6 +39,7 @@ tools/set-document-language.py  flip the served index.html to lang="he" dir="rtl
 | `packages/i18n/src/core/set-language.ts` | sets `document.documentElement.dir` when the language changes |
 | `packages/i18n/src/core/instance.ts` | applies `lang`/`dir` at module import (before the first React render, from the stored language) and again once i18next resolves — so a Hebrew user never sees a left-to-right flash |
 | `packages/i18n/src/index.ts` | exports the direction helpers |
+| `apps/web/app/root.tsx` | the app shell renders `lang` and `dir` from the language registry — React owns `<html>`, and its hardcoded `lang="en"` **wipes** a `dir` set from outside on the next render, which showed up as the same page rendering RTL on one load and LTR on the next |
 
 Whole files, not diffs: the files are tiny, and a diff against a moving upstream is a patch that
 applies cleanly one day and silently corrupts the next. Every edit is marked `BINA PATCH` so a
