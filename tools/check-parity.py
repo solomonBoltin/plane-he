@@ -49,8 +49,16 @@ BRANCH = re.compile(r"(\w+)\s*\{")
 #     not a suffix, so the Hebrew is rewritten as an ICU plural and never references {plural}.
 #     i18next ignores a value the translation never asks for, which is strictly better than
 #     rendering "חברs".
+#
+#   common.good / morning / afternoon / evening
+#     The app composes the greeting as `{good} {time_of_day}` — English word order, with `good` as
+#     one adjective shared by all three. Hebrew says it the other way round and the adjective AGREES
+#     with the noun ("בוקר טוב" but "צהריים טובים"), which one shared value cannot express. So the
+#     whole phrase moves into the time key and `good` becomes empty — verified on screen, where the
+#     un-fixed version rendered "טוב בוקר".
 ALLOWED_RESTRUCTURES: dict[tuple[str, str], str] = {
     ("workspace.json", "workspace.members_import.summary.message.success"): "English plural suffix supplied by code; Hebrew uses ICU instead",
+    ("common.json", "good"): "greeting is composed as '{good} {time}'; Hebrew puts the time first, so the phrase lives in the time key",
 }
 
 
@@ -179,12 +187,15 @@ def main() -> int:
                 continue
             total += 1
             got = he_leaves.get(path, "")
+            allowed = (name, path) in ALLOWED_RESTRUCTURES
             if not got.strip():
-                if value.strip():  # upstream ships a few intentionally-empty strings
+                # upstream ships a few intentionally-empty strings; an allowlisted path may also be
+                # deliberately empty (see ALLOWED_RESTRUCTURES — the greeting's shared adjective)
+                if value.strip() and not allowed:
                     problems.append(f"{name}:{path}: empty translation (English is not empty)")
                 continue
 
-            if (name, path) in ALLOWED_RESTRUCTURES:
+            if allowed:
                 continue
             want, have = describe(value), describe(got)
             if want[0] != have[0]:
