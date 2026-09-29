@@ -40,7 +40,14 @@ jobs:
 
       - name: Read the upstream pin
         id: pin
-        run: echo "tag=$(cat VERSION)" >> "$GITHUB_OUTPUT"
+        run: |
+          echo "tag=$(cat VERSION)" >> "$GITHUB_OUTPUT"
+          # The release tag carries the COMMIT, so every build gets its OWN release and its own
+          # asset. A rolling tag means the bytes behind a URL the office has pinned by sha256 change
+          # under it on the next push — and the failure lands later, as a checksum mismatch during a
+          # container build that has nothing to do with the change that caused it.
+          echo "short=$(echo "${GITHUB_SHA}" | cut -c1-7)" >> "$GITHUB_OUTPUT"
+          echo "release=he-$(cat VERSION)-$(echo "${GITHUB_SHA}" | cut -c1-7)" >> "$GITHUB_OUTPUT"
 
       - name: Clone upstream at the pin
         run: |
@@ -92,15 +99,16 @@ jobs:
       - name: Publish the SPA as a release asset
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: he-${{ steps.pin.outputs.tag }}
-          name: Hebrew frontend for Plane ${{ steps.pin.outputs.tag }}
+          tag_name: ${{ steps.pin.outputs.release }}
+          name: Hebrew frontend for Plane ${{ steps.pin.outputs.tag }} (${{ steps.pin.outputs.short }})
           body: |
             Hebrew locale (`he`) + RTL support for Plane ${{ steps.pin.outputs.tag }}, built from
             `makeplane/plane` at that tag with the patch in this repository.
 
             The tarball is the SPA that upstream's image serves from its static web root
             (`/usr/share/nginx/html` on this tag). It is what `apps/project-pln` consumes:
-            `PLANE_HE_WEB_URL` + `PLANE_HE_WEB_SHA256`.
+            `PLANE_HE_WEB_URL` + `PLANE_HE_WEB_SHA256`:
+            `https://github.com/${{ github.repository }}/releases/download/${{ steps.pin.outputs.release }}/${{ steps.spa.outputs.asset }}`
           files: ${{ steps.spa.outputs.asset }}
 
       # Order matters: the RELEASE ASSET above is the artifact the office consumes, and it needs no

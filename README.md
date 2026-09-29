@@ -63,6 +63,11 @@ It publishes two things:
    login. This is what the office consumes.
 2. **an image on GHCR** — the same bytes. Warns loudly if it could not flip the package to public.
 
+Each build publishes its OWN release, tagged `he-<upstream-version>-<commit>` — deliberately not a
+rolling tag. The consumer pins the asset by sha256, so a rolling tag would change the bytes behind a
+URL that a deployment already trusts, and the failure would surface later as a checksum mismatch in
+an unrelated container build. Immutable tags make a stale pin *stale* instead of *broken*.
+
 ## What is NOT fixed (deliberately, for now)
 
 * **Layouts that do not mirror.** Setting `dir="rtl"` flips flexbox order, text alignment and
